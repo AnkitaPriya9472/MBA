@@ -1,0 +1,61 @@
+{
+  "name": "Tata Steel",
+  "role": "company",
+  "description": "India's largest steel producer and a global steel major. Listed on BSE/NSE. Part of the Tata Group. Operates across the full steel value chain from mining to finished products.",
+  "objectives": [
+    "Maximise shareholder value and maintain market leadership in India",
+    "Protect profit margins despite raw material cost volatility",
+    "Expand domestic market share while maintaining strategic export presence",
+    "Maintain credit rating and balance sheet strength"
+  ],
+  "constraints": [
+    "Capital-intensive operations with high fixed costs",
+    "Dependent on iron ore and coking coal — subject to global commodity pricing",
+    "Regulatory compliance (environmental norms, mining regulations)",
+    "Long investment cycles — capacity expansion takes 3-5 years",
+    "Workforce of 70,000+ employees — social responsibility obligations"
+  ],
+  "data": {
+    "financial_year": "FY2024-25",
+    "revenue_consolidated_inr_cr": 228170,
+    "ebitda_inr_cr": 32500,
+    "ebitda_margin_pct": 14.2,
+    "net_profit_inr_cr": 9400,
+    "net_debt_inr_cr": 75000,
+    "crude_steel_production_mtpa": 35.6,
+    "india_operations": {
+      "revenue_share_pct": 58,
+      "capacity_mtpa": 21.6,
+      "key_plants": ["Jamshedpur", "Kalinganagar", "Meramandali"],
+      "domestic_market_share_pct": 12
+    },
+    "europe_operations": {
+      "revenue_share_pct": 35,
+      "entity": "Tata Steel Netherlands / UK",
+      "capacity_mtpa": 12,
+      "status": "Restructuring — high energy costs impacting profitability"
+    },
+    "export_exposure": {
+      "exports_as_pct_of_india_revenue": 15,
+      "key_export_markets": ["Southeast Asia", "Middle East", "Europe"],
+      "us_direct_export_pct": 3
+    },
+    "raw_material_profile": {
+      "iron_ore_self_sufficiency_pct": 65,
+      "coking_coal_import_dependency_pct": 85,
+      "coking_coal_source": "Australia (primary), Mozambique, Canada"
+    },
+    "product_mix": {
+      "flat_products_pct": 55,
+      "long_products_pct": 30,
+      "value_added_products_pct": 15
+    },
+    "key_risks_from_annual_report": [
+      "Global steel overcapacity (especially China)",
+      "Raw material price volatility",
+      "European operations profitability",
+      "Regulatory and environmental compliance costs",
+      "Currency fluctuation (INR/USD, INR/EUR)"
+    ]
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "agent_id": "retail_aggregate",
+  "name": "Retail Investors (India Steel Sector)",
+  "agent_type": "investor",
+  "description": "Aggregate representation of Indian retail investors holding steel sector equities. High sentiment sensitivity with incomplete information and strong herd behavior.",
+  "country": "IN",
+  "information_completeness": 0.6,
+  "direct_partners": [],
+  "objectives": [
+    "Preserve capital during market downturns and sector-specific shocks",
+    "Achieve long-term wealth creation aligned with India growth story",
+    "Follow institutional investor signals to time entry and exit",
+    "Avoid permanent capital loss from bankruptcy or fraud events"
+  ],
+  "constraints": [
+    "Limited access to management and sell-side analyst research",
+    "Behavioral biases amplify panic selling during negative news flow",
+    "Transaction costs and taxes penalize high-frequency trading strategies",
+    "Lack of diversification increases concentration risk in steel holdings"
+  ],
+  "data": {
+    "aum_india_usd_bn": 45,
+    "steel_sector_allocation_pct": 6.1,
+    "sentiment_sensitivity": 0.95,
+    "average_holding_period_months": 24,
+    "leverage_ratio": 1.0,
+    "financial_health": 0.72,
+    "fear_greed_index": 5.8
+  }
+}

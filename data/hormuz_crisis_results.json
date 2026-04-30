@@ -1,0 +1,1166 @@
+{
+  "scenario": {
+    "id": "hormuz_closure_iran_us_2025",
+    "name": "Iran-US Conflict: Strait of Hormuz Closure",
+    "description": "Escalating Iran-US military conflict leads to the closure of the Strait of Hormuz, choking ~20% of global oil supply and 40% of India's crude oil imports. India faces an acute energy crisis with cascading effects on inflation, forex reserves, manufacturing, and fiscal stability.",
+    "category": "supply_shock",
+    "severity": 0.95,
+    "affected_sectors": [
+      "oil_and_gas",
+      "refining",
+      "petrochemicals",
+      "shipping",
+      "aviation",
+      "manufacturing",
+      "agriculture",
+      "fertilizers",
+      "power_generation",
+      "forex_markets"
+    ],
+    "context": "Following months of escalating tensions over Iran's nuclear programme, the United States launches targeted military strikes on Iranian nuclear and military installations. Iran retaliates by mining and blockading the Strait of Hormuz \u2014 the narrow chokepoint through which ~20 million barrels per day (roughly 20% of global oil supply) transit. Insurance companies suspend coverage for tankers transiting the Persian Gulf. Brent crude surges past $150/barrel within 72 hours. India, which imports ~88% of its crude oil (4.5+ million barrels/day), with ~40% sourced from Gulf nations via the Strait, faces an immediate supply disruption. The Indian rupee depreciates sharply, forex reserves come under pressure, and downstream industries from fertilisers to aviation face existential cost shocks. The crisis is expected to last 2-4 months before diplomatic resolution or alternative routing stabilises flows.",
+    "initial_market_impacts": {
+      "brent_crude": 2.1,
+      "indian_rupee_usd": 0.88,
+      "nifty_50": 0.82,
+      "natural_gas": 1.75,
+      "gold": 1.15,
+      "shipping_freight_rates": 3.5
+    },
+    "duration_rounds": null,
+    "initiating_country": "US",
+    "initial_parameters": {
+      "strait_status": "blocked",
+      "crude_price_usd_barrel": 150,
+      "india_crude_import_dependency_pct": 88,
+      "gulf_share_of_india_imports_pct": 40,
+      "disrupted_supply_mbpd": 2.0,
+      "estimated_crisis_duration_months": "2-4",
+      "conflict_parties": [
+        "US",
+        "Iran"
+      ]
+    }
+  },
+  "rounds_completed": 3,
+  "world_state": {
+    "current_round": 3,
+    "scenario_name": "Iran-US Conflict: Strait of Hormuz Closure",
+    "agent_profiles": {
+      "ioc": {
+        "agent_id": "ioc",
+        "name": "Indian Oil Corporation (IOC)",
+        "agent_type": "company",
+        "description": "India's largest commercial enterprise by revenue and the flagship national oil company. Operates the country's biggest refining network (80.7 MTPA), a vast fuel retail network (35,000+ outlets), and manages a significant share of India's strategic petroleum reserves. Central to India's energy security.",
+        "objectives": [
+          "Ensure uninterrupted fuel supply across India despite supply disruption",
+          "Manage crude procurement costs and protect refining margins",
+          "Maintain strategic petroleum reserve levels for national energy security",
+          "Protect financial stability and shareholder value under extreme cost pressure"
+        ],
+        "constraints": [
+          "Government-regulated retail fuel pricing \u2014 cannot fully pass through costs",
+          "88% import dependency on crude oil \u2014 limited domestic alternatives",
+          "Pipeline and logistics infrastructure designed around Gulf crude grades",
+          "Refinery configuration optimized for specific crude baskets \u2014 switching grades has yield penalties",
+          "Strategic petroleum reserves cover only ~9.5 days of consumption"
+        ],
+        "data": {
+          "financial_year": "FY2024-25",
+          "revenue_inr_cr": 875000,
+          "net_profit_inr_cr": 31000,
+          "refining_capacity_mtpa": 80.7,
+          "refineries": [
+            "Panipat",
+            "Mathura",
+            "Gujarat",
+            "Haldia",
+            "Barauni",
+            "Paradip",
+            "Digboi",
+            "Bongaigaon",
+            "Guwahati"
+          ],
+          "market_share_pct": {
+            "refining": 31,
+            "fuel_retail": 42,
+            "lpg_distribution": 38
+          },
+          "crude_sourcing": {
+            "gulf_share_pct": 58,
+            "top_suppliers": [
+              "Iraq",
+              "Saudi Arabia",
+              "UAE",
+              "Kuwait"
+            ],
+            "russia_share_pct": 22,
+            "africa_share_pct": 12,
+            "spot_vs_term_ratio": "60:40"
+          },
+          "strategic_reserves": {
+            "capacity_million_tonnes": 5.33,
+            "current_fill_pct": 85,
+            "days_of_cover": 9.5
+          },
+          "pipeline_network_km": 18000,
+          "fuel_stations": 35700,
+          "key_risks": [
+            "Crude oil price volatility and supply disruption",
+            "Forex risk (INR/USD) on import bill",
+            "Government under-recovery on subsidised fuels",
+            "Refinery utilisation drop if crude supply constrained"
+          ]
+        },
+        "country": "IN",
+        "information_completeness": 1.0,
+        "direct_partners": [],
+        "home_government_id": null
+      },
+      "indian_govt_energy": {
+        "agent_id": "indian_govt_energy",
+        "name": "Indian Government (Ministry of Petroleum & Finance)",
+        "agent_type": "government",
+        "description": "The Indian central government acting through the Ministry of Petroleum & Natural Gas and the Ministry of Finance. Responsible for energy security, fuel pricing policy, fiscal management, and macroeconomic stability during geopolitical crises.",
+        "objectives": [
+          "Ensure energy security and prevent fuel shortages across India",
+          "Contain inflation and protect consumers from runaway fuel prices",
+          "Manage fiscal deficit \u2014 India's oil import bill is ~$150B/year at $80 crude",
+          "Maintain forex reserve adequacy and rupee stability",
+          "Diversify energy sourcing away from geopolitical chokepoints"
+        ],
+        "constraints": [
+          "Fiscal deficit target of 4.5% of GDP \u2014 limited room for fuel subsidies",
+          "Political economy \u2014 fuel price hikes trigger public backlash and electoral risk",
+          "Strategic petroleum reserves last only ~9.5 days at current consumption",
+          "Diplomatic balancing \u2014 India has ties with both US and Iran",
+          "Limited short-term alternatives to Gulf crude pipeline infrastructure",
+          "Monetary policy coordination needed with RBI on inflation and forex"
+        ],
+        "data": {
+          "india_oil_sector": {
+            "crude_import_dependency_pct": 88,
+            "crude_import_bill_fy25_usd_bn": 155,
+            "daily_consumption_mbpd": 5.5,
+            "gulf_sourcing_share_pct": 40,
+            "russia_sourcing_share_pct": 22,
+            "domestic_production_mbpd": 0.6
+          },
+          "fiscal_position": {
+            "fiscal_deficit_target_pct_gdp": 4.5,
+            "forex_reserves_usd_bn": 620,
+            "import_cover_months": 10,
+            "oil_subsidy_budget_inr_cr": 11925,
+            "fuel_tax_revenue_inr_cr": 320000
+          },
+          "strategic_reserves": {
+            "total_capacity_million_tonnes": 5.33,
+            "locations": [
+              "Visakhapatnam",
+              "Mangalore",
+              "Padur"
+            ],
+            "phase_2_planned_mt": 6.5,
+            "current_days_of_cover": 9.5
+          },
+          "policy_tools_available": [
+            "Release strategic petroleum reserves",
+            "Cut excise duty on fuel to cushion prices",
+            "Invoke IEA coordinated emergency response",
+            "Negotiate emergency crude supplies from Russia, US SPR, Africa",
+            "Impose fuel rationing or priority allocation",
+            "RBI forex intervention to stabilise rupee",
+            "Diplomatic engagement \u2014 ceasefire advocacy at UN/G20",
+            "Fast-track LNG import contracts and coal-to-power substitution"
+          ],
+          "diplomatic_context": {
+            "india_iran_relations": "Strategic \u2014 Chabahar port, historical trade ties",
+            "india_us_relations": "Strategic partner \u2014 defence, trade, Quad alliance",
+            "india_saudi_relations": "Top crude supplier, strategic investment partner",
+            "india_russia_relations": "Discounted crude supplier since 2022, strategic partner"
+          }
+        },
+        "country": "IN",
+        "information_completeness": 1.0,
+        "direct_partners": [],
+        "home_government_id": null
+      },
+      "indian_airlines": {
+        "agent_id": "indian_airlines",
+        "name": "Indian Aviation Sector (IndiGo & Air India)",
+        "agent_type": "company",
+        "description": "India's aviation sector represented by its two largest carriers \u2014 IndiGo (market leader, ~60% domestic share) and Air India (Tata-owned, full-service international). Aviation turbine fuel (ATF) constitutes 35-45% of airline operating costs, making the sector acutely vulnerable to oil price shocks.",
+        "objectives": [
+          "Maintain flight operations and route network despite ATF price surge",
+          "Protect operating margins and cash reserves under extreme fuel costs",
+          "Manage passenger demand impact from potential fare hikes",
+          "Honour fleet expansion commitments (IndiGo: 500+ aircraft order)"
+        ],
+        "constraints": [
+          "ATF is 35-45% of operating costs \u2014 $150 crude could mean 80%+ ATF price increase",
+          "Indian airlines cannot hedge fuel in domestic markets (regulatory restriction)",
+          "Fare increases face competitive pressure and demand elasticity",
+          "Fleet commitments \u2014 aircraft delivery payments in USD, exacerbated by rupee depreciation",
+          "Labour-intensive \u2014 cannot quickly cut capacity without workforce disruption",
+          "International routes require fuel stops that may be disrupted"
+        ],
+        "data": {
+          "financial_year": "FY2024-25",
+          "indigo": {
+            "revenue_inr_cr": 73000,
+            "net_profit_inr_cr": 6800,
+            "domestic_market_share_pct": 62,
+            "fleet_size": 380,
+            "fuel_cost_pct_of_revenue": 38,
+            "cash_reserves_inr_cr": 28000,
+            "order_book_aircraft": 500
+          },
+          "air_india": {
+            "revenue_inr_cr": 42000,
+            "domestic_market_share_pct": 14,
+            "international_share_pct": 22,
+            "fleet_size": 200,
+            "fuel_cost_pct_of_revenue": 42,
+            "transformation_capex_usd_bn": 70
+          },
+          "sector_metrics": {
+            "total_domestic_passengers_cr": 15.5,
+            "total_international_passengers_cr": 3.2,
+            "atf_price_current_inr_kl": 98000,
+            "atf_sensitivity": "Every $10/barrel increase adds ~INR 6,000/kl to ATF cost",
+            "break_even_load_factor_pct": 78
+          },
+          "key_risks": [
+            "ATF price surge eroding margins or pushing to operating losses",
+            "Rupee depreciation increasing USD-denominated lease and capex costs",
+            "Demand destruction from fare hikes reducing load factors",
+            "International route disruption through Gulf airspace",
+            "Working capital squeeze from higher fuel procurement costs"
+          ]
+        },
+        "country": "IN",
+        "information_completeness": 1.0,
+        "direct_partners": [],
+        "home_government_id": null
+      },
+      "indian_agri_fertilizer": {
+        "agent_id": "indian_agri_fertilizer",
+        "name": "Indian Agriculture & Fertilizer Sector",
+        "agent_type": "consumer",
+        "description": "India's agriculture sector (employing ~42% of the workforce, contributing ~18% of GDP) and the fertilizer industry that sustains it. India imports ~30% of its urea and most of its potash and phosphate feedstock. Natural gas (a key feedstock for urea) and crude-linked naphtha are critical inputs. A Hormuz closure disrupts both energy costs and fertilizer supply chains, threatening food security.",
+        "objectives": [
+          "Ensure uninterrupted fertilizer availability for the upcoming Kharif (monsoon) season",
+          "Contain input cost inflation for farmers \u2014 diesel, fertilizers, pesticides",
+          "Protect farm incomes and prevent rural distress",
+          "Maintain India's food grain production targets and buffer stock levels"
+        ],
+        "constraints": [
+          "Fertilizer subsidy bill already ~INR 1.88 lakh crore \u2014 fiscal room limited",
+          "Urea production depends on natural gas \u2014 80% of gas is imported, much from Gulf",
+          "Phosphate and potash are 100% imported \u2014 supply chain via sea routes",
+          "Kharif sowing window (June-July) is non-negotiable \u2014 delays destroy crop yields",
+          "150+ million smallholder farmers \u2014 politically sensitive constituency",
+          "Diesel (farm mechanisation, transport) costs directly linked to crude price"
+        ],
+        "data": {
+          "agriculture_sector": {
+            "contribution_to_gdp_pct": 18,
+            "workforce_share_pct": 42,
+            "food_grain_production_mt": 330,
+            "farm_diesel_consumption_pct_of_total": 12,
+            "msp_increase_last_year_pct": 5
+          },
+          "fertilizer_industry": {
+            "total_consumption_mt": 58,
+            "urea_consumption_mt": 35,
+            "urea_domestic_production_mt": 26,
+            "urea_import_dependency_pct": 26,
+            "dap_consumption_mt": 10,
+            "dap_import_dependency_pct": 50,
+            "potash_import_dependency_pct": 100,
+            "fertilizer_subsidy_inr_cr": 188000,
+            "top_import_sources": [
+              "China",
+              "Oman",
+              "Saudi Arabia",
+              "Russia",
+              "Qatar"
+            ]
+          },
+          "energy_inputs": {
+            "natural_gas_for_urea_bcm": 10,
+            "gas_import_dependency_pct": 50,
+            "lng_sourcing": "Qatar (40%), US, Oman, spot market",
+            "diesel_price_sensitivity": "Every INR 10/litre increase adds INR 15,000/hectare to farming cost"
+          },
+          "food_security": {
+            "buffer_stock_rice_mt": 32,
+            "buffer_stock_wheat_mt": 26,
+            "pds_beneficiaries_cr": 80,
+            "inflation_food_cpi_current_pct": 8.5
+          },
+          "key_risks": [
+            "Fertilizer shortage during sowing season \u2014 crop failure risk",
+            "Diesel and transport cost spiral \u2014 farm gate price collapse vs retail inflation",
+            "Natural gas supply disruption halting urea plants",
+            "Rupee depreciation inflating all import-dependent input costs",
+            "Rural demand contraction cascading to FMCG, auto, banking sectors"
+          ]
+        },
+        "country": "IN",
+        "information_completeness": 1.0,
+        "direct_partners": [],
+        "home_government_id": null
+      },
+      "rbi": {
+        "agent_id": "rbi",
+        "name": "Reserve Bank of India (RBI)",
+        "agent_type": "regulator",
+        "description": "India's central bank responsible for monetary policy, inflation targeting (4% CPI \u00b1 2%), financial stability, and forex reserve management. In an oil shock scenario, the RBI faces the classic impossible trinity \u2014 managing inflation, supporting growth, and defending the currency simultaneously.",
+        "objectives": [
+          "Contain inflation within the 2-6% target band despite supply-side oil shock",
+          "Maintain orderly forex markets and prevent disruptive rupee depreciation",
+          "Preserve financial system stability \u2014 banks, NBFCs, and capital markets",
+          "Support economic growth without fuelling inflationary expectations"
+        ],
+        "constraints": [
+          "Inflation targeting mandate \u2014 CPI already at 5.5%, oil shock could push to 8-10%",
+          "Rate hikes to fight inflation would slow GDP growth (currently ~6.5%)",
+          "Forex reserves ($620B) are large but defending rupee burns reserves quickly",
+          "Capital outflows from FPIs during geopolitical risk reduce market liquidity",
+          "Transmission lag \u2014 rate changes take 6-9 months to affect real economy",
+          "Cannot control supply-side inflation with demand-side monetary tools"
+        ],
+        "data": {
+          "monetary_policy": {
+            "repo_rate_pct": 6.0,
+            "inflation_cpi_current_pct": 5.5,
+            "inflation_target_pct": 4.0,
+            "tolerance_band_pct": "2-6",
+            "gdp_growth_current_pct": 6.5,
+            "gdp_growth_forecast_pct": 6.3
+          },
+          "forex_position": {
+            "forex_reserves_usd_bn": 620,
+            "import_cover_months": 10,
+            "inr_usd_rate": 86.5,
+            "fpi_net_flows_fy25_usd_bn": -12,
+            "daily_forex_market_turnover_usd_bn": 80
+          },
+          "financial_stability": {
+            "bank_credit_growth_pct": 14,
+            "gnpa_ratio_pct": 2.8,
+            "capital_adequacy_ratio_pct": 16.5,
+            "mutual_fund_aum_inr_lakh_cr": 68,
+            "oil_company_borrowings_risk": "Higher working capital needs from OMCs could stress banking system"
+          },
+          "policy_tools_available": [
+            "Adjust repo rate (hike to fight inflation, cut to support growth)",
+            "Open market operations (OMO) \u2014 buy/sell government securities",
+            "Forex market intervention \u2014 sell USD from reserves to defend rupee",
+            "Special dollar swap windows for oil marketing companies",
+            "CRR/SLR adjustments to manage liquidity",
+            "Forward guidance and communication to anchor expectations",
+            "Regulatory forbearance for stressed sectors (aviation, transport)"
+          ],
+          "historical_precedent": {
+            "2022_ukraine_shock": "RBI hiked repo 250bps, spent $70B defending rupee, inflation peaked at 7.8%",
+            "2008_oil_shock": "Crude at $147 \u2014 RBI raised rates, rupee fell 25%, inflation hit 12%",
+            "2014_oil_crash": "Crude fell to $45 \u2014 RBI cut rates 150bps, rupee stabilised, growth recovered"
+          }
+        },
+        "country": "IN",
+        "information_completeness": 1.0,
+        "direct_partners": [],
+        "home_government_id": null
+      }
+    },
+    "agent_states": {
+      "ioc": {
+        "agent_id": "ioc",
+        "current_round": 3,
+        "fear_greed_index": 7.17824762723431,
+        "capture_score": 0.0,
+        "financial_health": 0.7,
+        "active_actions": [],
+        "completed_actions": [
+          "wait_and_observe",
+          "hedge",
+          "hedge"
+        ],
+        "relationships": {},
+        "metrics": {},
+        "signals_sent": []
+      },
+      "indian_govt_energy": {
+        "agent_id": "indian_govt_energy",
+        "current_round": 3,
+        "fear_greed_index": 7.022111979951945,
+        "capture_score": 0.0,
+        "financial_health": 0.7,
+        "active_actions": [],
+        "completed_actions": [
+          "capital_controls",
+          "subsidy",
+          "stimulus"
+        ],
+        "relationships": {},
+        "metrics": {},
+        "signals_sent": []
+      },
+      "indian_airlines": {
+        "agent_id": "indian_airlines",
+        "current_round": 3,
+        "fear_greed_index": 4.91275,
+        "capture_score": 0.0,
+        "financial_health": 0.7,
+        "active_actions": [],
+        "completed_actions": [
+          "wait_and_observe",
+          "wait_and_observe",
+          "wait_and_observe"
+        ],
+        "relationships": {},
+        "metrics": {},
+        "signals_sent": []
+      },
+      "indian_agri_fertilizer": {
+        "agent_id": "indian_agri_fertilizer",
+        "current_round": 3,
+        "fear_greed_index": 8.063016295167708,
+        "capture_score": 0.0,
+        "financial_health": 0.7,
+        "active_actions": [],
+        "completed_actions": [
+          "switch_suppliers",
+          "stockpile",
+          "pass_through_pricing"
+        ],
+        "relationships": {},
+        "metrics": {},
+        "signals_sent": []
+      },
+      "rbi": {
+        "agent_id": "rbi",
+        "current_round": 3,
+        "fear_greed_index": 8.063016295167708,
+        "capture_score": 0.0,
+        "financial_health": 0.7,
+        "active_actions": [],
+        "completed_actions": [
+          "issue_cautionary_note",
+          "open_investigation",
+          "impose_provisional_duty"
+        ],
+        "relationships": {},
+        "metrics": {},
+        "signals_sent": []
+      }
+    },
+    "market_states": {
+      "shipping_freight_rates": {
+        "commodity": "shipping_freight_rates",
+        "spot_price": 1750.0,
+        "prev_price": 1750.0,
+        "price_change_pct": null,
+        "demand": 0.0,
+        "supply": 0.0,
+        "volume_cleared": 0.0,
+        "unmet_demand": 0.0,
+        "unmet_demand_pct": 0.0,
+        "price_history": [
+          1750.0,
+          1750.0,
+          1750.0,
+          1750.0
+        ]
+      },
+      "gold": {
+        "commodity": "gold",
+        "spot_price": 575.0,
+        "prev_price": 575.0,
+        "price_change_pct": null,
+        "demand": 0.0,
+        "supply": 0.0,
+        "volume_cleared": 0.0,
+        "unmet_demand": 0.0,
+        "unmet_demand_pct": 0.0,
+        "price_history": [
+          575.0,
+          575.0,
+          575.0,
+          575.0
+        ]
+      },
+      "natural_gas": {
+        "commodity": "natural_gas",
+        "spot_price": 875.0,
+        "prev_price": 875.0,
+        "price_change_pct": null,
+        "demand": 0.0,
+        "supply": 0.0,
+        "volume_cleared": 0.0,
+        "unmet_demand": 0.0,
+        "unmet_demand_pct": 0.0,
+        "price_history": [
+          875.0,
+          875.0,
+          875.0,
+          875.0
+        ]
+      },
+      "indian_rupee_usd": {
+        "commodity": "indian_rupee_usd",
+        "spot_price": 440.0,
+        "prev_price": 440.0,
+        "price_change_pct": null,
+        "demand": 0.0,
+        "supply": 0.0,
+        "volume_cleared": 0.0,
+        "unmet_demand": 0.0,
+        "unmet_demand_pct": 0.0,
+        "price_history": [
+          440.0,
+          440.0,
+          440.0,
+          440.0
+        ]
+      },
+      "nifty_50": {
+        "commodity": "nifty_50",
+        "spot_price": 410.0,
+        "prev_price": 410.0,
+        "price_change_pct": null,
+        "demand": 0.0,
+        "supply": 0.0,
+        "volume_cleared": 0.0,
+        "unmet_demand": 0.0,
+        "unmet_demand_pct": 0.0,
+        "price_history": [
+          410.0,
+          410.0,
+          410.0,
+          410.0
+        ]
+      },
+      "brent_crude": {
+        "commodity": "brent_crude",
+        "spot_price": 1050.0,
+        "prev_price": 1050.0,
+        "price_change_pct": null,
+        "demand": 0.0,
+        "supply": 0.0,
+        "volume_cleared": 0.0,
+        "unmet_demand": 0.0,
+        "unmet_demand_pct": 0.0,
+        "price_history": [
+          1050.0,
+          1050.0,
+          1050.0,
+          1050.0
+        ]
+      }
+    },
+    "trade_routes": [
+      {
+        "from_country": "SA",
+        "to_country": "IN",
+        "commodity": "crude_oil",
+        "volume": 36800000.0,
+        "tariff_rate": 0.0,
+        "friction": 0.08
+      },
+      {
+        "from_country": "UAE",
+        "to_country": "IN",
+        "commodity": "crude_oil",
+        "volume": 18600000.0,
+        "tariff_rate": 0.0,
+        "friction": 0.07
+      },
+      {
+        "from_country": "IQ",
+        "to_country": "IN",
+        "commodity": "crude_oil",
+        "volume": 22500000.0,
+        "tariff_rate": 0.0,
+        "friction": 0.1
+      },
+      {
+        "from_country": "RU",
+        "to_country": "IN",
+        "commodity": "crude_oil",
+        "volume": 29750000.0,
+        "tariff_rate": 0.0,
+        "friction": 0.15
+      },
+      {
+        "from_country": "US",
+        "to_country": "IN",
+        "commodity": "crude_oil",
+        "volume": 6400000.0,
+        "tariff_rate": 0.0,
+        "friction": 0.2
+      },
+      {
+        "from_country": "QA",
+        "to_country": "IN",
+        "commodity": "lng",
+        "volume": 5460000.0,
+        "tariff_rate": 0.0,
+        "friction": 0.09
+      },
+      {
+        "from_country": "SA",
+        "to_country": "IN",
+        "commodity": "fertilizers",
+        "volume": 2700000.0,
+        "tariff_rate": 0.0,
+        "friction": 0.1
+      },
+      {
+        "from_country": "IN",
+        "to_country": "ASEAN",
+        "commodity": "petroleum_products",
+        "volume": 17640000.0,
+        "tariff_rate": 2.0,
+        "friction": 0.1
+      },
+      {
+        "from_country": "IN",
+        "to_country": "EU",
+        "commodity": "petroleum_products",
+        "volume": 12367500.0,
+        "tariff_rate": 3.0,
+        "friction": 0.15
+      }
+    ],
+    "all_signals": [
+      {
+        "from_agent": "rbi",
+        "to_agent": null,
+        "content": "RBI issues cautionary note highlighting heightened inflation risks from oil-supply shock and affirms readiness to act decisively to preserve price stability.",
+        "signal_type": "market_signal",
+        "round": 1
+      },
+      {
+        "from_agent": "indian_agri_fertilizer",
+        "to_agent": null,
+        "content": "Indian fertilizer sector activating non-Gulf supply chains and building record Kharif buffer to shield 150 million farmers from Hormuz shock.",
+        "signal_type": "market_signal",
+        "round": 1
+      },
+      {
+        "from_agent": "indian_govt_energy",
+        "to_agent": null,
+        "content": "RBI announces temporary capital-flow management measures; finance ministry rolls out limited fuel-cost support for buses, trucks and fertiliser units to protect farmers and commuters.",
+        "signal_type": "market_signal",
+        "round": 1
+      },
+      {
+        "from_agent": "ioc",
+        "to_agent": null,
+        "content": "IOC monitoring Strait situation closely; no immediate commercial action announced.",
+        "signal_type": "market_signal",
+        "round": 1
+      },
+      {
+        "from_agent": "indian_airlines",
+        "to_agent": null,
+        "content": "IndiGo and Air India monitor fuel crisis closely, defer discretionary spend, and await policy direction while maintaining full schedule.",
+        "signal_type": "market_signal",
+        "round": 1
+      },
+      {
+        "from_agent": "indian_agri_fertilizer",
+        "to_agent": null,
+        "content": "Indian fertilizer sector rushing to pre-position monsoon nutrients amid Gulf supply choke; urges government for interim freight-cum-subsidy support.",
+        "signal_type": "market_signal",
+        "round": 2
+      },
+      {
+        "from_agent": "ioc",
+        "to_agent": null,
+        "content": "Indian Oil has entered into crude-oil and currency hedges covering the majority of its near-term import exposure to shield consumers and shareholders from extreme price volatility.",
+        "signal_type": "market_signal",
+        "round": 2
+      },
+      {
+        "from_agent": "rbi",
+        "to_agent": null,
+        "content": "DGTR initiates anti-dumping investigation on Chinese flat-rolled steel imports to protect domestic industry from injury amid heightened external price volatility.",
+        "signal_type": "market_signal",
+        "round": 2
+      },
+      {
+        "from_agent": "indian_govt_energy",
+        "to_agent": null,
+        "content": "Govt announces temporary fuel-price stabilisation fund and accelerated switch to Rupee-denominated long-term contracts with Russia & Brazil to replace 0.6 mb/d of Gulf cargoes.",
+        "signal_type": "market_signal",
+        "round": 2
+      },
+      {
+        "from_agent": "indian_airlines",
+        "to_agent": null,
+        "content": "IndiGo & Air India monitoring fuel crisis closely; no immediate network changes announced.",
+        "signal_type": "market_signal",
+        "round": 2
+      },
+      {
+        "from_agent": "indian_agri_fertilizer",
+        "to_agent": null,
+        "content": "Fertiliser industry seeks immediate government intervention to share the extraordinary energy-driven cost shock and protect farmer affordability for Kharif season.",
+        "signal_type": "market_signal",
+        "round": 3
+      },
+      {
+        "from_agent": "rbi",
+        "to_agent": null,
+        "content": "RBI, acting via DGTR, imposes 20% provisional anti-dumping duty on Chinese flat-rolled steel for 120 days to counter injurious pricing during oil-shock window.",
+        "signal_type": "market_signal",
+        "round": 3
+      },
+      {
+        "from_agent": "indian_govt_energy",
+        "to_agent": null,
+        "content": "Government rolls out comprehensive energy-crisis package: duty-free LNG imports, enhanced LPG-fertiliser subsidies and forex stabilisation measures; RBI announces $10bn swap line and fresh NRI deposit facility to calm currency markets.",
+        "signal_type": "market_signal",
+        "round": 3
+      },
+      {
+        "from_agent": "indian_airlines",
+        "to_agent": null,
+        "content": "IndiGo & Air India monitoring fuel crisis; no new initiatives announced.",
+        "signal_type": "market_signal",
+        "round": 3
+      },
+      {
+        "from_agent": "ioc",
+        "to_agent": null,
+        "content": "IOC executes emergency hedge to protect margins against crude price spike and currency volatility.",
+        "signal_type": "market_signal",
+        "round": 3
+      }
+    ],
+    "events": [],
+    "round_responses": {
+      "1": {
+        "rbi": {
+          "agent_id": "rbi",
+          "round": 1,
+          "primary_action": "issue_cautionary_note",
+          "secondary_action": null,
+          "assessment": "With CPI already at 5.5% and an oil shock that could push inflation to 8-10%, the immediate priority is anchoring inflation expectations. A public cautionary note signals vigilance without prematurely burning reserves or tightening policy before transmission lags play out. It buys time to assess persistence of the shock and coordinate with fiscal authorities on supply-side mitigation.",
+          "confidence": 0.75,
+          "impact_areas": [],
+          "metrics_change": {},
+          "signals_to_ecosystem": [
+            {
+              "from_agent": "rbi",
+              "to_agent": null,
+              "content": "RBI issues cautionary note highlighting heightened inflation risks from oil-supply shock and affirms readiness to act decisively to preserve price stability.",
+              "signal_type": "market_signal",
+              "round": 1
+            }
+          ],
+          "private_intent": {
+            "content": "Internal scenario runs show inflation breaching 8% within two months if pass-through is complete; preference is to conserve forex and await fiscal response before deploying rate or FX intervention tools.",
+            "target_agent": null
+          },
+          "raw_llm_output": "{\n  \"action_id\": \"issue_cautionary_note\",\n  \"secondary_action_id\": null,\n  \"reasoning\": \"With CPI already at 5.5% and an oil shock that could push inflation to 8-10%, the immediate priority is anchoring inflation expectations. A public cautionary note signals vigilance without prematurely burning reserves or tightening policy before transmission lags play out. It buys time to assess persistence of the shock and coordinate with fiscal authorities on supply-side mitigation.\",\n  \"public_signal\": \"RBI issues cautionary note highlighting heightened inflation risks from oil-supply shock and affirms readiness to act decisively to preserve price stability.\",\n  \"private_signal\": \"Internal scenario runs show inflation breaching 8% within two months if pass-through is complete; preference is to conserve forex and await fiscal response before deploying rate or FX intervention tools.\",\n  \"confidence\": 0.75,\n  \"enforcement_action\": \"verbal_intervention\",\n  \"fine_amount_usd_mn\": null,\n  \"target_entity_id\": null,\n  \"rule_scope\": \"macro-stability expectations\",\n  \"independence_score\": 0.85,\n  \"metrics_change\": {}\n}",
+          "is_fallback": false
+        },
+        "indian_agri_fertilizer": {
+          "agent_id": "indian_agri_fertilizer",
+          "round": 1,
+          "primary_action": "switch_suppliers",
+          "secondary_action": "stockpile",
+          "assessment": "Hormuz blockade threatens 80% of India\u2019s imported urea feedstock gas and 100% of potash/phosphate rock. Immediate pivot to spot LNG from Qatar via Oman-Sohar diversion, long-term potash contracts with Belarus/Russian rail route, and domestic naphtha-based urea units at 105% capacity. Stockpiling 2.5 Mt urea and 1 Mt DAP at district warehouses before Kharif sowing window closes; working capital hit accepted to avoid rural unrest.",
+          "confidence": 0.65,
+          "impact_areas": [],
+          "metrics_change": {
+            "input_cost_change_pct": 38.0
+          },
+          "signals_to_ecosystem": [
+            {
+              "from_agent": "indian_agri_fertilizer",
+              "to_agent": null,
+              "content": "Indian fertilizer sector activating non-Gulf supply chains and building record Kharif buffer to shield 150 million farmers from Hormuz shock.",
+              "signal_type": "market_signal",
+              "round": 1
+            }
+          ],
+          "private_intent": {
+            "content": "Only 45 days of domestic gas cover left; rail potash route adds $90/t freight vs vessel; subsidy bill will breach INR 2.2 trn unless retail prices raised.",
+            "target_agent": null
+          },
+          "raw_llm_output": "{\n  \"action_id\": \"switch_suppliers\",\n  \"secondary_action_id\": \"stockpile\",\n  \"reasoning\": \"Hormuz blockade threatens 80% of India\u2019s imported urea feedstock gas and 100% of potash/phosphate rock. Immediate pivot to spot LNG from Qatar via Oman-Sohar diversion, long-term potash contracts with Belarus/Russian rail route, and domestic naphtha-based urea units at 105% capacity. Stockpiling 2.5 Mt urea and 1 Mt DAP at district warehouses before Kharif sowing window closes; working capital hit accepted to avoid rural unrest.\",\n  \"public_signal\": \"Indian fertilizer sector activating non-Gulf supply chains and building record Kharif buffer to shield 150 million farmers from Hormuz shock.\",\n  \"private_signal\": \"Only 45 days of domestic gas cover left; rail potash route adds $90/t freight vs vessel; subsidy bill will breach INR 2.2 trn unless retail prices raised.\",\n  \"confidence\": 0.65,\n  \"purchase_decision\": \"buy_alternative\",\n  \"volume_demand_mt\": 3500000,\n  \"max_price_usd_per_mt\": 1200,\n  \"price_sensitivity\": 0.90,\n  \"metrics_change\": {\"input_cost_change_pct\": 38}\n}",
+          "is_fallback": false
+        },
+        "indian_govt_energy": {
+          "agent_id": "indian_govt_energy",
+          "round": 1,
+          "primary_action": "capital_controls",
+          "secondary_action": "subsidy",
+          "assessment": "Rupee at record low and forex reserves bleeding; impose temporary 15% cap on outward FII redemptions and 30-day moratorium on non-trade FX convertibility to stem slide. Pair with a narrow, targeted fuel subsidy only for public transport and fertiliser makers to contain knock-on inflation without busting 4.5% deficit target.",
+          "confidence": 0.75,
+          "impact_areas": [],
+          "metrics_change": {
+            "fiscal_deficit_pct": 0.15
+          },
+          "signals_to_ecosystem": [
+            {
+              "from_agent": "indian_govt_energy",
+              "to_agent": null,
+              "content": "RBI announces temporary capital-flow management measures; finance ministry rolls out limited fuel-cost support for buses, trucks and fertiliser units to protect farmers and commuters.",
+              "signal_type": "market_signal",
+              "round": 1
+            }
+          ],
+          "private_intent": {
+            "content": "Cabinet agrees any broad subsidy or stimulus would breach fiscal glide-path; capital controls are reversible and WTO-compliant. Quietly talks opened with US, Russia and UAE for swap lines and extra barrels outside Hormuz.",
+            "target_agent": null
+          },
+          "raw_llm_output": "{\n  \"action_id\": \"capital_controls\",\n  \"secondary_action_id\": \"subsidy\",\n  \"reasoning\": \"Rupee at record low and forex reserves bleeding; impose temporary 15% cap on outward FII redemptions and 30-day moratorium on non-trade FX convertibility to stem slide. Pair with a narrow, targeted fuel subsidy only for public transport and fertiliser makers to contain knock-on inflation without busting 4.5% deficit target.\",\n  \"public_signal\": \"RBI announces temporary capital-flow management measures; finance ministry rolls out limited fuel-cost support for buses, trucks and fertiliser units to protect farmers and commuters.\",\n  \"private_signal\": \"Cabinet agrees any broad subsidy or stimulus would breach fiscal glide-path; capital controls are reversible and WTO-compliant. Quietly talks opened with US, Russia and UAE for swap lines and extra barrels outside Hormuz.\",\n  \"confidence\": 0.75,\n  \"policy_instrument\": \"capital_controls\",\n  \"tariff_rate_pct\": 0,\n  \"subsidy_amount_usd_mn\": 1200,\n  \"target_country_iso\": \"\",\n  \"wto_notification_status\": \"none\",\n  \"political_feasibility\": 0.7,\n  \"retaliation_risk\": 0.3,\n  \"metrics_change\": {\"fiscal_deficit_pct\": 0.15}\n}",
+          "is_fallback": false
+        },
+        "ioc": {
+          "agent_id": "ioc",
+          "round": 1,
+          "primary_action": "wait_and_observe",
+          "secondary_action": null,
+          "assessment": "Zero cash prevents any costly action; even 2% hedge or lobby spend is unaffordable. Preserve optionality until financial health improves or government initiates emergency support.",
+          "confidence": 0.5,
+          "impact_areas": [],
+          "metrics_change": {
+            "revenue_change_pct": 0.0,
+            "margin_change_pct": 0.0
+          },
+          "signals_to_ecosystem": [
+            {
+              "from_agent": "ioc",
+              "to_agent": null,
+              "content": "IOC monitoring Strait situation closely; no immediate commercial action announced.",
+              "signal_type": "market_signal",
+              "round": 1
+            }
+          ],
+          "private_intent": {
+            "content": "Internal cash runway stressed; seeking government-led relief before deploying own funds.",
+            "target_agent": null
+          },
+          "raw_llm_output": "{\n  \"action_id\": \"wait_and_observe\",\n  \"secondary_action_id\": null,\n  \"reasoning\": \"Zero cash prevents any costly action; even 2% hedge or lobby spend is unaffordable. Preserve optionality until financial health improves or government initiates emergency support.\",\n  \"public_signal\": \"IOC monitoring Strait situation closely; no immediate commercial action announced.\",\n  \"private_signal\": \"Internal cash runway stressed; seeking government-led relief before deploying own funds.\",\n  \"confidence\": 0.5,\n  \"target_markets\": [],\n  \"capex_commitment_usd_mn\": 0,\n  \"lobby_target\": null,\n  \"lobby_amount_usd_mn\": 0,\n  \"production_change_pct\": 0,\n  \"export_volume_mt\": 0,\n  \"metrics_change\": {\"revenue_change_pct\": 0, \"margin_change_pct\": 0}\n}",
+          "is_fallback": false
+        },
+        "indian_airlines": {
+          "agent_id": "indian_airlines",
+          "round": 1,
+          "primary_action": "wait_and_observe",
+          "secondary_action": null,
+          "assessment": "Zero cash prevents any paid action; lobbying or hedging would breach liquidity. Preserve optionality until cash position improves or government acts unsolicited.",
+          "confidence": 0.5,
+          "impact_areas": [],
+          "metrics_change": {
+            "revenue_change_pct": 0.0,
+            "margin_change_pct": -2.0
+          },
+          "signals_to_ecosystem": [
+            {
+              "from_agent": "indian_airlines",
+              "to_agent": null,
+              "content": "IndiGo and Air India monitor fuel crisis closely, defer discretionary spend, and await policy direction while maintaining full schedule.",
+              "signal_type": "market_signal",
+              "round": 1
+            }
+          ],
+          "private_intent": {
+            "content": "Board freezes all non-critical outflows; crew overtime limits imposed; contingency fare-hike and 10% capacity-reduction plans drafted for Round 2 if relief not forthcoming.",
+            "target_agent": null
+          },
+          "raw_llm_output": "{\n  \"action_id\": \"wait_and_observe\",\n  \"secondary_action_id\": null,\n  \"reasoning\": \"Zero cash prevents any paid action; lobbying or hedging would breach liquidity. Preserve optionality until cash position improves or government acts unsolicited.\",\n  \"public_signal\": \"IndiGo and Air India monitor fuel crisis closely, defer discretionary spend, and await policy direction while maintaining full schedule.\",\n  \"private_signal\": \"Board freezes all non-critical outflows; crew overtime limits imposed; contingency fare-hike and 10% capacity-reduction plans drafted for Round 2 if relief not forthcoming.\",\n  \"confidence\": 0.50,\n  \"target_markets\": [\"domestic\"],\n  \"capex_commitment_usd_mn\": 0,\n  \"lobby_target\": null,\n  \"lobby_amount_usd_mn\": 0,\n  \"production_change_pct\": 0,\n  \"export_volume_mt\": 0,\n  \"metrics_change\": {\"revenue_change_pct\": 0, \"margin_change_pct\": -2}\n}",
+          "is_fallback": false
+        }
+      },
+      "2": {
+        "indian_agri_fertilizer": {
+          "agent_id": "indian_agri_fertilizer",
+          "round": 2,
+          "primary_action": "stockpile",
+          "secondary_action": "demand_subsidy",
+          "assessment": "Hormuz closure cuts off 40% of India\u2019s LNG and all potash/phosphate routes; Kharif sowing window immovable. Must front-load 3-month buffer of urea, DAP, MOP before freight & forex worsen. Simultaneously petition for emergency subsidy bridge to keep farm-gate prices stable and protect 150 mn smallholders.",
+          "confidence": 0.8,
+          "impact_areas": [],
+          "metrics_change": {
+            "input_cost_change_pct": 35.0
+          },
+          "signals_to_ecosystem": [
+            {
+              "from_agent": "indian_agri_fertilizer",
+              "to_agent": null,
+              "content": "Indian fertilizer sector rushing to pre-position monsoon nutrients amid Gulf supply choke; urges government for interim freight-cum-subsidy support.",
+              "signal_type": "market_signal",
+              "round": 2
+            }
+          ],
+          "private_intent": {
+            "content": "Working-capital hit ~INR  12k cr but failure to secure inventory risks crop loss and rural unrest far costlier than 2\u00d7 loss aversion factor.",
+            "target_agent": null
+          },
+          "raw_llm_output": "{\n  \"action_id\": \"stockpile\",\n  \"secondary_action_id\": \"demand_subsidy\",\n  \"reasoning\": \"Hormuz closure cuts off 40% of India\u2019s LNG and all potash/phosphate routes; Kharif sowing window immovable. Must front-load 3-month buffer of urea, DAP, MOP before freight & forex worsen. Simultaneously petition for emergency subsidy bridge to keep farm-gate prices stable and protect 150 mn smallholders.\",\n  \"public_signal\": \"Indian fertilizer sector rushing to pre-position monsoon nutrients amid Gulf supply choke; urges government for interim freight-cum-subsidy support.\",\n  \"private_signal\": \"Working-capital hit ~INR  12k cr but failure to secure inventory risks crop loss and rural unrest far costlier than 2\u00d7 loss aversion factor.\",\n  \"confidence\": 0.80,\n  \"purchase_decision\": \"buy_international\",\n  \"volume_demand_mt\": 3500000,\n  \"max_price_usd_per_mt\": 900,\n  \"price_sensitivity\": 0.90,\n  \"metrics_change\": {\"input_cost_change_pct\": 35}\n}",
+          "is_fallback": false
+        },
+        "ioc": {
+          "agent_id": "ioc",
+          "round": 2,
+          "primary_action": "hedge",
+          "secondary_action": null,
+          "assessment": "With Brent at $1050/MT (\u2248$140/bbl) and rupee at 440/USD, every day of unhedged exposure widens our forex-linked crude payables. A -round 3-month swap on 70% of expected Gulf-shortfall volumes costs <3% cash, locks-in today\u2019s Brent/INR, and caps worst-case cash bleed. Physical supply scramble will dominate later rounds; first priority is to ring-finance the P&L from super-spike volatility.",
+          "confidence": 0.85,
+          "impact_areas": [],
+          "metrics_change": {
+            "revenue_change_pct": 0.0,
+            "margin_change_pct": 2.0
+          },
+          "signals_to_ecosystem": [
+            {
+              "from_agent": "ioc",
+              "to_agent": null,
+              "content": "Indian Oil has entered into crude-oil and currency hedges covering the majority of its near-term import exposure to shield consumers and shareholders from extreme price volatility.",
+              "signal_type": "market_signal",
+              "round": 2
+            }
+          ],
+          "private_intent": {
+            "content": "Treasury executed Brent collars $135-$180/bbl on 10 mbbl and INR forwards at 445-460 for $2.2 bn notional; premium paid $42 m (2.1% cash).",
+            "target_agent": null
+          },
+          "raw_llm_output": "{\n  \"action_id\": \"hedge\",\n  \"secondary_action_id\": null,\n  \"reasoning\": \"With Brent at $1050/MT (\u2248$140/bbl) and rupee at 440/USD, every day of unhedged exposure widens our forex-linked crude payables. A -round 3-month swap on 70% of expected Gulf-shortfall volumes costs <3% cash, locks-in today\u2019s Brent/INR, and caps worst-case cash bleed. Physical supply scramble will dominate later rounds; first priority is to ring-finance the P&L from super-spike volatility.\",\n  \"public_signal\": \"Indian Oil has entered into crude-oil and currency hedges covering the majority of its near-term import exposure to shield consumers and shareholders from extreme price volatility.\",\n  \"private_signal\": \"Treasury executed Brent collars $135-$180/bbl on 10 mbbl and INR forwards at 445-460 for $2.2 bn notional; premium paid $42 m (2.1% cash).\",\n  \"confidence\": 0.85,\n  \"target_markets\": [],\n  \"capex_commitment_usd_mn\": 0,\n  \"lobby_target\": null,\n  \"lobby_amount_usd_mn\": 0,\n  \"production_change_pct\": 0,\n  \"export_volume_mt\": 0,\n  \"metrics_change\": {\"revenue_change_pct\": 0, \"margin_change_pct\": 2}\n}",
+          "is_fallback": false
+        },
+        "rbi": {
+          "agent_id": "rbi",
+          "round": 2,
+          "primary_action": "open_investigation",
+          "secondary_action": null,
+          "assessment": "With Brent at $1050/MT and INR under 440, the oil shock is already pushing import-cost inflation toward 8-10%. Under the RBI\u2019s mandate to contain CPI within 2-6%, we must act now to curb any additional supply-side price pressure. Domestic steelmakers have filed a prima facie petition showing rising dumped import volumes from China at prices below normal value, threatening material injury. Opening a WTO-compliant anti-dumping investigation (max 12 months) allows provisional duties later if injury worsens, sending a hawkish signal that the central bank will not tolerate cost-push inflation spreading beyond energy. This preserves monetary credibility without burning reserves or hiking rates prematurely, buying time for fiscal authorities to secure alternative oil routes.",
+          "confidence": 0.78,
+          "impact_areas": [],
+          "metrics_change": {},
+          "signals_to_ecosystem": [
+            {
+              "from_agent": "rbi",
+              "to_agent": null,
+              "content": "DGTR initiates anti-dumping investigation on Chinese flat-rolled steel imports to protect domestic industry from injury amid heightened external price volatility.",
+              "signal_type": "market_signal",
+              "round": 2
+            }
+          ],
+          "private_intent": {
+            "content": "Use investigation timeline to stagger any provisional duty decision until after 2-month Hormuz window, aligning trade defence with inflation outlook and avoiding double supply shock.",
+            "target_agent": null
+          },
+          "raw_llm_output": "{\n  \"action_id\": \"open_investigation\",\n  \"secondary_action_id\": null,\n  \"reasoning\": \"With Brent at $1050/MT and INR under 440, the oil shock is already pushing import-cost inflation toward 8-10%. Under the RBI\u2019s mandate to contain CPI within 2-6%, we must act now to curb any additional supply-side price pressure. Domestic steelmakers have filed a prima facie petition showing rising dumped import volumes from China at prices below normal value, threatening material injury. Opening a WTO-compliant anti-dumping investigation (max 12 months) allows provisional duties later if injury worsens, sending a hawkish signal that the central bank will not tolerate cost-push inflation spreading beyond energy. This preserves monetary credibility without burning reserves or hiking rates prematurely, buying time for fiscal authorities to secure alternative oil routes.\",\n  \"public_signal\": \"DGTR initiates anti-dumping investigation on Chinese flat-rolled steel imports to protect domestic industry from injury amid heightened external price volatility.\",\n  \"private_signal\": \"Use investigation timeline to stagger any provisional duty decision until after 2-month Hormuz window, aligning trade defence with inflation outlook and avoiding double supply shock.\",\n  \"confidence\": 0.78,\n  \"enforcement_action\": \"investigation_open\",\n  \"fine_amount_usd_mn\": null,\n  \"target_entity_id\": \"chinese_flat_steel_exporters\",\n  \"rule_scope\": \"Flat-rolled alloy and non-alloy steel sheets/coils from China\",\n  \"independence_score\": 0.80,\n  \"metrics_change\": {}\n}",
+          "is_fallback": false
+        },
+        "indian_govt_energy": {
+          "agent_id": "indian_govt_energy",
+          "round": 2,
+          "primary_action": "subsidy",
+          "secondary_action": "stimulus",
+          "assessment": "With Brent at $1050/MT and 40% of crude now blocked, inflation will breach 8% unless we shield consumers. Rolling out a targeted fuel subsidy of INR 5/litre on diesel & LPG for 3 months (cost ~0.7% GDP) and a front-loaded 0.75% of GDP stimulus via extra-budgetary oil bonds to OMCs so pump prices rise <5% even at $150 crude. Keeps deficit at 4.3%, politically survivable.",
+          "confidence": 0.55,
+          "impact_areas": [],
+          "metrics_change": {
+            "fiscal_deficit_pct": 0.7,
+            "inflation_pct": -1.2,
+            "forex_reserves_pct": -2.1
+          },
+          "signals_to_ecosystem": [
+            {
+              "from_agent": "indian_govt_energy",
+              "to_agent": null,
+              "content": "Govt announces temporary fuel-price stabilisation fund and accelerated switch to Rupee-denominated long-term contracts with Russia & Brazil to replace 0.6 mb/d of Gulf cargoes.",
+              "signal_type": "market_signal",
+              "round": 2
+            }
+          ],
+          "private_intent": {
+            "content": "Cabinet note: RBI agreed to open a $30 bn FX swap line and defer FRBM glide-path by 1 year; US quietly signalled no CAATSA waiver for Russian barrels\u2014need to keep 15-day stockpile under the table.",
+            "target_agent": null
+          },
+          "raw_llm_output": "{\n  \"action_id\": \"subsidy\",\n  \"secondary_action_id\": \"stimulus\",\n  \"reasoning\": \"With Brent at $1050/MT and 40% of crude now blocked, inflation will breach 8% unless we shield consumers. Rolling out a targeted fuel subsidy of INR 5/litre on diesel & LPG for 3 months (cost ~0.7% GDP) and a front-loaded 0.75% of GDP stimulus via extra-budgetary oil bonds to OMCs so pump prices rise <5% even at $150 crude. Keeps deficit at 4.3%, politically survivable.\",\n  \"public_signal\": \"Govt announces temporary fuel-price stabilisation fund and accelerated switch to Rupee-denominated long-term contracts with Russia & Brazil to replace 0.6 mb/d of Gulf cargoes.\",\n  \"private_signal\": \"Cabinet note: RBI agreed to open a $30 bn FX swap line and defer FRBM glide-path by 1 year; US quietly signalled no CAATSA waiver for Russian barrels\u2014need to keep 15-day stockpile under the table.\",\n  \"confidence\": 0.55,\n  \"policy_instrument\": \"subsidy\",\n  \"tariff_rate_pct\": 0,\n  \"subsidy_amount_usd_mn\": 9500,\n  \"target_country_iso\": \"\",\n  \"wto_notification_status\": \"none\",\n  \"political_feasibility\": 0.85,\n  \"retaliation_risk\": 0.2,\n  \"metrics_change\": {\"fiscal_deficit_pct\": 0.7, \"inflation_pct\": -1.2, \"forex_reserves_pct\": -2.1}\n}",
+          "is_fallback": false
+        },
+        "indian_airlines": {
+          "agent_id": "indian_airlines",
+          "round": 2,
+          "primary_action": "wait_and_observe",
+          "secondary_action": null,
+          "assessment": "Zero cash prevents any paid action; lobbying or hedging would breach liquidity. Preserve optionality.",
+          "confidence": 0.5,
+          "impact_areas": [],
+          "metrics_change": {
+            "revenue_change_pct": 0.0,
+            "margin_change_pct": 0.0
+          },
+          "signals_to_ecosystem": [
+            {
+              "from_agent": "indian_airlines",
+              "to_agent": null,
+              "content": "IndiGo & Air India monitoring fuel crisis closely; no immediate network changes announced.",
+              "signal_type": "market_signal",
+              "round": 2
+            }
+          ],
+          "private_intent": {
+            "content": "Board has frozen all discretionary spend; internal war-room exploring slot swaps, wet-lease returns, and deferred capex to survive 2-4-month Hormuz shutdown.",
+            "target_agent": null
+          },
+          "raw_llm_output": "{\n  \"action_id\": \"wait_and_observe\",\n  \"secondary_action_id\": null,\n  \"reasoning\": \"Zero cash prevents any paid action; lobbying or hedging would breach liquidity. Preserve optionality.\",\n  \"public_signal\": \"IndiGo & Air India monitoring fuel crisis closely; no immediate network changes announced.\",\n  \"private_signal\": \"Board has frozen all discretionary spend; internal war-room exploring slot swaps, wet-lease returns, and deferred capex to survive 2-4-month Hormuz shutdown.\",\n  \"confidence\": 0.5,\n  \"target_markets\": [],\n  \"capex_commitment_usd_mn\": 0,\n  \"lobby_target\": null,\n  \"lobby_amount_usd_mn\": 0,\n  \"production_change_pct\": 0,\n  \"export_volume_mt\": 0,\n  \"metrics_change\": {\"revenue_change_pct\": 0, \"margin_change_pct\": 0}\n}",
+          "is_fallback": false
+        }
+      },
+      "3": {
+        "indian_agri_fertilizer": {
+          "agent_id": "indian_agri_fertilizer",
+          "round": 3,
+          "primary_action": "pass_through_pricing",
+          "secondary_action": "demand_subsidy",
+          "assessment": "With Brent at $1050/MT (+650% y/y) and INR at 440/USD, landed urea cost up 3\u00d7; potash/phosphate freight at $1750/MT makes import parity impossible. Fiscal space exhausted, but letting farm-gate prices triple would crush Kharif acreage and food security. We must pass 30-35% of cost spike to keep plants running, while simultaneously pressing GoI for an emergency nutrient subsidy window or customs-duty waiver to cap retail MRPs.",
+          "confidence": 0.65,
+          "impact_areas": [],
+          "metrics_change": {
+            "input_cost_change_pct": 220.0
+          },
+          "signals_to_ecosystem": [
+            {
+              "from_agent": "indian_agri_fertilizer",
+              "to_agent": null,
+              "content": "Fertiliser industry seeks immediate government intervention to share the extraordinary energy-driven cost shock and protect farmer affordability for Kharif season.",
+              "signal_type": "market_signal",
+              "round": 3
+            }
+          ],
+          "private_intent": {
+            "content": "Internal models show if we absorb >25% of this spike our cash reserves exhaust in 6 weeks; political backlash if retail prices double is existential.",
+            "target_agent": null
+          },
+          "raw_llm_output": "{\n  \"action_id\": \"pass_through_pricing\",\n  \"secondary_action_id\": \"demand_subsidy\",\n  \"reasoning\": \"With Brent at $1050/MT (+650% y/y) and INR at 440/USD, landed urea cost up 3\u00d7; potash/phosphate freight at $1750/MT makes import parity impossible. Fiscal space exhausted, but letting farm-gate prices triple would crush Kharif acreage and food security. We must pass 30-35% of cost spike to keep plants running, while simultaneously pressing GoI for an emergency nutrient subsidy window or customs-duty waiver to cap retail MRPs.\",\n  \"public_signal\": \"Fertiliser industry seeks immediate government intervention to share the extraordinary energy-driven cost shock and protect farmer affordability for Kharif season.\",\n  \"private_signal\": \"Internal models show if we absorb >25% of this spike our cash reserves exhaust in 6 weeks; political backlash if retail prices double is existential.\",\n  \"confidence\": 0.65,\n  \"purchase_decision\": \"delay_imports\",\n  \"volume_demand_mt\": 0,\n  \"max_price_usd_per_mt\": 900,\n  \"price_sensitivity\": 0.90,\n  \"metrics_change\": {\"input_cost_change_pct\": 220}\n}",
+          "is_fallback": false
+        },
+        "rbi": {
+          "agent_id": "rbi",
+          "round": 3,
+          "primary_action": "impose_provisional_duty",
+          "secondary_action": null,
+          "assessment": "With Brent at $1050/MT and INR at 440, the oil shock is feeding straight into landed cost of all imports. Domestic steelmakers face a 30-40% cost spike on ore, energy and freight, while artificially cheap Chinese offers (likely state-subsidised) flood in to grab market share. A 20% provisional duty for 4 months cushions the domestic industry during the Hormuz crisis, prevents dumping-induced closures and job losses, and is WTO-compliant under the \u2018critical circumstances\u2019 clause. It also signals that RBI will not let external price shocks destabilise strategic domestic capacity ahead of infra-led growth revival.",
+          "confidence": 0.82,
+          "impact_areas": [],
+          "metrics_change": {},
+          "signals_to_ecosystem": [
+            {
+              "from_agent": "rbi",
+              "to_agent": null,
+              "content": "RBI, acting via DGTR, imposes 20% provisional anti-dumping duty on Chinese flat-rolled steel for 120 days to counter injurious pricing during oil-shock window.",
+              "signal_type": "market_signal",
+              "round": 3
+            }
+          ],
+          "private_intent": {
+            "content": "Internal assessment shows 3 mt excess Chinese inventory looking for outlet; duty buys 90 days for domestic mills to reset contracts and pass through higher energy costs without dumping margin compression.",
+            "target_agent": null
+          },
+          "raw_llm_output": "{\n  \"action_id\": \"impose_provisional_duty\",\n  \"secondary_action_id\": null,\n  \"reasoning\": \"With Brent at $1050/MT and INR at 440, the oil shock is feeding straight into landed cost of all imports. Domestic steelmakers face a 30-40% cost spike on ore, energy and freight, while artificially cheap Chinese offers (likely state-subsidised) flood in to grab market share. A 20% provisional duty for 4 months cushions the domestic industry during the Hormuz crisis, prevents dumping-induced closures and job losses, and is WTO-compliant under the \u2018critical circumstances\u2019 clause. It also signals that RBI will not let external price shocks destabilise strategic domestic capacity ahead of infra-led growth revival.\",\n  \"public_signal\": \"RBI, acting via DGTR, imposes 20% provisional anti-dumping duty on Chinese flat-rolled steel for 120 days to counter injurious pricing during oil-shock window.\",\n  \"private_signal\": \"Internal assessment shows 3 mt excess Chinese inventory looking for outlet; duty buys 90 days for domestic mills to reset contracts and pass through higher energy costs without dumping margin compression.\",\n  \"confidence\": 0.82,\n  \"enforcement_action\": \"provisional_duty_20pct\",\n  \"fine_amount_usd_mn\": null,\n  \"target_entity_id\": \"Chinese_flat_rolled_steel exporters\",\n  \"rule_scope\": \"All HR/CR flat-rolled carbon steel from China, HS 7208-7211\",\n  \"independence_score\": 0.70,\n  \"metrics_change\": {}\n}",
+          "is_fallback": false
+        },
+        "indian_govt_energy": {
+          "agent_id": "indian_govt_energy",
+          "round": 3,
+          "primary_action": "stimulus",
+          "secondary_action": "capital_controls",
+          "assessment": "Brent at $1050/MT (\u2248$150/bbl) pushes annual oil bill to ~$280B, risking 6% CAD and 8%+ inflation. Cannot let demand collapse or rupee free-fall. Launching targeted fiscal-monetary stimulus: zero customs duty on LNG/spot crude vessels, \u20b9600bn additional fertiliser & LPG subsidy, RBI to inject $10bn via forex swaps and raise FCNR(B) window to 3Y to draw NRI deposits. Simultaneously tightening capital-outflow ring-fence: cut FII debt redemption limit from 15% to 5%/month, mandate 100% margin on short-rupee OTC trades, and channel export-earnings repatriation through PSU banks within 30 days to stabilise INR/USD above 80.",
+          "confidence": 0.72,
+          "impact_areas": [],
+          "metrics_change": {
+            "fiscal_deficit_pct": 0.9,
+            "current_account_deficit_pct": 0.4
+          },
+          "signals_to_ecosystem": [
+            {
+              "from_agent": "indian_govt_energy",
+              "to_agent": null,
+              "content": "Government rolls out comprehensive energy-crisis package: duty-free LNG imports, enhanced LPG-fertiliser subsidies and forex stabilisation measures; RBI announces $10bn swap line and fresh NRI deposit facility to calm currency markets.",
+              "signal_type": "market_signal",
+              "round": 3
+            }
+          ],
+          "private_intent": {
+            "content": "PMO directive: keep retail fuel hikes \u2264\u20b92/litre every two weeks to contain street-level anger; ask Saudi/UAE for 2-month deferred-payment crude contracts; explore Russian ESPO cargoes on CIF basis to bypass Hormuz; contingency draft to release 3 mmt from SPR at Kalikkadu/Padur if Brent >$140 for ...",
+            "target_agent": null
+          },
+          "raw_llm_output": "{\n  \"action_id\": \"stimulus\",\n  \"secondary_action_id\": \"capital_controls\",\n  \"reasoning\": \"Brent at $1050/MT (\u2248$150/bbl) pushes annual oil bill to ~$280B, risking 6% CAD and 8%+ inflation. Cannot let demand collapse or rupee free-fall. Launching targeted fiscal-monetary stimulus: zero customs duty on LNG/spot crude vessels, \u20b9600bn additional fertiliser & LPG subsidy, RBI to inject $10bn via forex swaps and raise FCNR(B) window to 3Y to draw NRI deposits. Simultaneously tightening capital-outflow ring-fence: cut FII debt redemption limit from 15% to 5%/month, mandate 100% margin on short-rupee OTC trades, and channel export-earnings repatriation through PSU banks within 30 days to stabilise INR/USD above 80.\",\n  \"public_signal\": \"Government rolls out comprehensive energy-crisis package: duty-free LNG imports, enhanced LPG-fertiliser subsidies and forex stabilisation measures; RBI announces $10bn swap line and fresh NRI deposit facility to calm currency markets.\",\n  \"private_signal\": \"PMO directive: keep retail fuel hikes \u2264\u20b92/litre every two weeks to contain street-level anger; ask Saudi/UAE for 2-month deferred-payment crude contracts; explore Russian ESPO cargoes on CIF basis to bypass Hormuz; contingency draft to release 3 mmt from SPR at Kalikkadu/Padur if Brent >$140 for 10 straight days.\",\n  \"confidence\": 0.72,\n  \"policy_instrument\": \"stimulus\",\n  \"tariff_rate_pct\": 0,\n  \"subsidy_amount_usd_mn\": 7200,\n  \"target_country_iso\": \"GLOBAL\",\n  \"wto_notification_status\": \"none\",\n  \"political_feasibility\": 0.65,\n  \"retaliation_risk\": 0.2,\n  \"metrics_change\": {\"fiscal_deficit_pct\": 0.9, \"current_account_deficit_pct\": 0.4}\n}",
+          "is_fallback": false
+        },
+        "indian_airlines": {
+          "agent_id": "indian_airlines",
+          "round": 3,
+          "primary_action": "wait_and_observe",
+          "secondary_action": null,
+          "assessment": "Cash at zero; any paid action breaches liquidity covenant. Must preserve optionality until internal cash or external relief arrives.",
+          "confidence": 0.5,
+          "impact_areas": [],
+          "metrics_change": {},
+          "signals_to_ecosystem": [
+            {
+              "from_agent": "indian_airlines",
+              "to_agent": null,
+              "content": "IndiGo & Air India monitoring fuel crisis; no new initiatives announced.",
+              "signal_type": "market_signal",
+              "round": 3
+            }
+          ],
+          "private_intent": {
+            "content": "Board freezes discretionary spend; fleet delivery discussions with lessors underway for deferrals.",
+            "target_agent": null
+          },
+          "raw_llm_output": "{\n  \"action_id\": \"wait_and_observe\",\n  \"secondary_action_id\": null,\n  \"reasoning\": \"Cash at zero; any paid action breaches liquidity covenant. Must preserve optionality until internal cash or external relief arrives.\",\n  \"public_signal\": \"IndiGo & Air India monitoring fuel crisis; no new initiatives announced.\",\n  \"private_signal\": \"Board freezes discretionary spend; fleet delivery discussions with lessors underway for deferrals.\",\n  \"confidence\": 0.50,\n  \"target_markets\": [],\n  \"capex_commitment_usd_mn\": 0,\n  \"lobby_target\": null,\n  \"lobby_amount_usd_mn\": 0,\n  \"production_change_pct\": 0,\n  \"export_volume_mt\": 0,\n  \"metrics_change\": {}\n}",
+          "is_fallback": false
+        },
+        "ioc": {
+          "agent_id": "ioc",
+          "round": 3,
+          "primary_action": "hedge",
+          "secondary_action": null,
+          "assessment": "Cash at zero; only 1-3% hedge cost is executable via supplier credit lines already in place. Lock-in 3-month Brent at ~$150/bbl and USD-INR at 440 to cap refining margin erosion while government deliberates on SPR release and pricing relief. No cash outflow today, collateral pledged from inventory.",
+          "confidence": 0.7,
+          "impact_areas": [],
+          "metrics_change": {
+            "revenue_change_pct": 0.0,
+            "margin_change_pct": -2.0
+          },
+          "signals_to_ecosystem": [
+            {
+              "from_agent": "ioc",
+              "to_agent": null,
+              "content": "IOC executes emergency hedge to protect margins against crude price spike and currency volatility.",
+              "signal_type": "market_signal",
+              "round": 3
+            }
+          ],
+          "private_intent": {
+            "content": "Board note: hedge covers 15 mb over 90 days, keeps margin loss under 2 $/bbl vs 6 $/bbl unhedged.",
+            "target_agent": null
+          },
+          "raw_llm_output": "{\n  \"action_id\": \"hedge\",\n  \"secondary_action_id\": null,\n  \"reasoning\": \"Cash at zero; only 1-3% hedge cost is executable via supplier credit lines already in place. Lock-in 3-month Brent at ~$150/bbl and USD-INR at 440 to cap refining margin erosion while government deliberates on SPR release and pricing relief. No cash outflow today, collateral pledged from inventory.\",\n  \"public_signal\": \"IOC executes emergency hedge to protect margins against crude price spike and currency volatility.\",\n  \"private_signal\": \"Board note: hedge covers 15 mb over 90 days, keeps margin loss under 2 $/bbl vs 6 $/bbl unhedged.\",\n  \"confidence\": 0.7,\n  \"target_markets\": [],\n  \"capex_commitment_usd_mn\": 0,\n  \"lobby_target\": null,\n  \"lobby_amount_usd_mn\": 0,\n  \"production_change_pct\": 0,\n  \"export_volume_mt\": 0,\n  \"metrics_change\": {\"revenue_change_pct\": 0, \"margin_change_pct\": -2}\n}",
+          "is_fallback": false
+        }
+      }
+    }
+  },
+  "metadata": {
+    "model_used": "moonshotai/kimi-k2",
+    "duration_seconds": 55.627326011657715,
+    "timestamp": "2026-04-12T15:07:02.579909",
+    "total_api_calls": 15,
+    "total_fallbacks": 0
+  }
+}

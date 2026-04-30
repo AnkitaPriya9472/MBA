@@ -1,0 +1,49 @@
+{
+  "name": "Iron Ore & Coking Coal Suppliers",
+  "role": "supplier",
+  "description": "Represents the upstream raw material suppliers — both domestic iron ore miners (NMDC, Tata Steel Mining) and international coking coal exporters (Australia, Mozambique). These suppliers control the key cost inputs for steel production.",
+  "objectives": [
+    "Maximise revenue from raw material sales",
+    "Exploit supply-demand imbalances to improve pricing power",
+    "Maintain long-term supply relationships with major steel producers",
+    "Secure mining leases and expand production capacity"
+  ],
+  "constraints": [
+    "Mining regulations and environmental clearances (India)",
+    "Export duties on iron ore (India imposes 30% on lumps, 0% on pellets)",
+    "Logistics bottlenecks — rail and port capacity limits",
+    "Global commodity price cycles — cannot control global benchmarks",
+    "Long-term contracts lock in pricing for 6-12 months"
+  ],
+  "data": {
+    "iron_ore_market": {
+      "india_production_mtpa": 275,
+      "india_consumption_mtpa": 220,
+      "surplus_for_export_mtpa": 55,
+      "global_benchmark_price_usd_per_tonne": 110,
+      "domestic_price_inr_per_tonne": 5500,
+      "major_domestic_miners": ["NMDC", "Tata Steel Mining", "JSW Steel Mining", "SAIL"],
+      "nmdc_market_share_pct": 15
+    },
+    "coking_coal_market": {
+      "india_import_dependency_pct": 85,
+      "primary_source": "Australia (70%)",
+      "secondary_sources": ["Mozambique", "Canada", "USA"],
+      "benchmark_price_usd_per_tonne": 230,
+      "price_volatility_last_3yr_range": "150-450 USD/tonne",
+      "india_annual_import_mtpa": 55
+    },
+    "supply_dynamics": {
+      "iron_ore_supply_elasticity": "Low in short run (6-12 months to ramp up)",
+      "coking_coal_supply_concentration": "Top 4 Australian miners control 60% of seaborne trade",
+      "logistics_bottleneck": "Indian railways handles 65% of iron ore movement",
+      "monsoon_impact": "Mining output drops 15-20% during Jun-Sep monsoon"
+    },
+    "pricing_power_triggers": {
+      "demand_surge": "Steel capacity expansion → immediate ore price increase",
+      "supply_disruption": "Cyclone, mine accident, export ban → price spike",
+      "china_factor": "Chinese demand changes swing global prices ±20%",
+      "trade_diversion": "If steel exports blocked from one market, domestic demand for ore may shift"
+    }
+  }
+}

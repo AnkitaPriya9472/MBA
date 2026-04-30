@@ -1,0 +1,20 @@
+{
+  "id": "iron_ore_supply_disruption_2025",
+  "name": "Australian Iron Ore Export Disruption",
+  "category": "supply_shock",
+  "severity": 0.6,
+  "affected_sectors": ["steel", "mining"],
+  "initiating_country": "AU",
+  "context": "Severe cyclone activity in Western Australia has disrupted iron ore exports from major ports, reducing seaborne supply by approximately 25 million tons over the next quarter. Indian steel producers, who import 40% of their iron ore requirements from Australia, face immediate input cost pressure as spot prices spike 28%. The disruption coincides with peak construction season demand in India, compounding supply-demand imbalances and threatening steel production cuts if alternative sources cannot be secured rapidly.",
+  "initial_market_impacts": {
+    "steel_hrc": 1.08,
+    "iron_ore": 1.28
+  },
+  "duration_rounds": 3,
+  "initial_parameters": {
+    "supply_reduction_mt": 25000000,
+    "affected_routes": ["AU_IN"],
+    "price_spike_pct": 28,
+    "duration_weeks": 12
+  }
+}

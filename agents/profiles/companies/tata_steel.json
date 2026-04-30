@@ -1,0 +1,41 @@
+{
+  "agent_id": "tata_steel",
+  "name": "Tata Steel Limited",
+  "agent_type": "company",
+  "description": "India's largest integrated steel producer with global operations across Europe and Asia. Known for export diversification and strong European subsidiary presence.",
+  "country": "IN",
+  "information_completeness": 1.0,
+  "direct_partners": ["iron_ore", "gov_india"],
+  "home_government_id": "gov_india",
+  "objectives": [
+    "Maintain global export diversification across 3+ markets to reduce single-market dependency",
+    "Protect European operations during US tariff shock and preserve integrated supply chain",
+    "Preserve EBITDA margins above 15% through strategic market pivots",
+    "Sustain leadership position in Indian domestic market (18%+ market share)"
+  ],
+  "constraints": [
+    "Board approval required for capital expenditure exceeding $1 billion",
+    "UK operations require separate regulatory compliance and cannot be easily relocated",
+    "Debt servicing obligations limit cash deployment flexibility",
+    "European subsidiaries subject to EU trade regulations and climate mandates"
+  ],
+  "data": {
+    "revenue_usd_bn": 22.0,
+    "ebitda_margin_pct": 18.0,
+    "us_export_volume_mt": 2100000,
+    "cash_reserves_usd_bn": 4.2,
+    "debt_to_equity": 0.6,
+    "primary_markets": ["India", "Europe", "Southeast Asia"],
+    "lobbying_budget_usd_mn": 50,
+    "active_subsidiaries": [
+      "Tata Steel UK",
+      "NatSteel",
+      "Tata Steel Netherlands"
+    ],
+    "financial_health": 0.82,
+    "fear_greed_index": 5.5,
+    "loss_aversion_multiplier": 2.0,
+    "herd_tendency": 0.3,
+    "risk_appetite": "moderate"
+  }
+}

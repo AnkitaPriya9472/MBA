@@ -1,0 +1,49 @@
+{
+  "name": "Indian Government (Ministry of Steel & Commerce)",
+  "role": "government",
+  "description": "The Indian central government acting through the Ministry of Steel and Ministry of Commerce & Industry. Responsible for trade policy, industrial policy, and protecting domestic industry while maintaining international trade relations.",
+  "objectives": [
+    "Protect domestic steel industry and manufacturing jobs",
+    "Maintain stable steel prices for downstream industries (auto, construction, infra)",
+    "Strengthen India's position in global trade negotiations",
+    "Promote 'Make in India' and Atmanirbhar Bharat (self-reliance) in steel"
+  ],
+  "constraints": [
+    "WTO commitments — cannot impose arbitrary tariffs without justification",
+    "Diplomatic relationships — retaliatory tariffs risk escalation",
+    "Downstream industry impact — high steel prices hurt auto, construction sectors",
+    "Political economy — must balance producer and consumer interests",
+    "Fiscal constraints — subsidies need budgetary allocation"
+  ],
+  "data": {
+    "india_steel_sector": {
+      "total_production_mtpa": 144,
+      "global_rank": 2,
+      "contribution_to_gdp_pct": 2,
+      "employment_direct_lakhs": 6,
+      "employment_indirect_lakhs": 25,
+      "target_capacity_2030_mtpa": 300
+    },
+    "trade_policy_current": {
+      "import_duty_on_steel_pct": "7.5 (most categories)",
+      "anti_dumping_duties": "Active on Chinese, Korean, Japanese steel products",
+      "export_incentives": "MEIS/RoDTEP applicable on select steel products",
+      "quality_control_orders": "BIS certification mandatory for 145+ steel products"
+    },
+    "us_india_trade_context": {
+      "bilateral_trade_usd_bn": 128,
+      "india_steel_exports_to_us_usd_mn": 950,
+      "us_share_of_india_steel_exports_pct": 8,
+      "existing_us_tariffs": "Section 232 — 25% on steel imports (since 2018)",
+      "india_retaliatory_tariffs": "Imposed counter-tariffs on select US goods in 2019"
+    },
+    "policy_tools_available": [
+      "Raise/lower import duties",
+      "Impose anti-dumping or safeguard duties",
+      "Provide production-linked incentives (PLI)",
+      "Negotiate bilateral trade agreements",
+      "Issue quality control orders to restrict imports",
+      "Provide export subsidies or tax benefits"
+    ]
+  }
+}

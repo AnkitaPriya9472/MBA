@@ -1,0 +1,60 @@
+{
+  "agent_id": "indian_agri_fertilizer",
+  "name": "Indian Agriculture & Fertilizer Sector",
+  "agent_type": "consumer",
+  "country": "IN",
+  "description": "India's agriculture sector (employing ~42% of the workforce, contributing ~18% of GDP) and the fertilizer industry that sustains it. India imports ~30% of its urea and most of its potash and phosphate feedstock. Natural gas (a key feedstock for urea) and crude-linked naphtha are critical inputs. A Hormuz closure disrupts both energy costs and fertilizer supply chains, threatening food security.",
+  "objectives": [
+    "Ensure uninterrupted fertilizer availability for the upcoming Kharif (monsoon) season",
+    "Contain input cost inflation for farmers — diesel, fertilizers, pesticides",
+    "Protect farm incomes and prevent rural distress",
+    "Maintain India's food grain production targets and buffer stock levels"
+  ],
+  "constraints": [
+    "Fertilizer subsidy bill already ~INR 1.88 lakh crore — fiscal room limited",
+    "Urea production depends on natural gas — 80% of gas is imported, much from Gulf",
+    "Phosphate and potash are 100% imported — supply chain via sea routes",
+    "Kharif sowing window (June-July) is non-negotiable — delays destroy crop yields",
+    "150+ million smallholder farmers — politically sensitive constituency",
+    "Diesel (farm mechanisation, transport) costs directly linked to crude price"
+  ],
+  "data": {
+    "agriculture_sector": {
+      "contribution_to_gdp_pct": 18,
+      "workforce_share_pct": 42,
+      "food_grain_production_mt": 330,
+      "farm_diesel_consumption_pct_of_total": 12,
+      "msp_increase_last_year_pct": 5
+    },
+    "fertilizer_industry": {
+      "total_consumption_mt": 58,
+      "urea_consumption_mt": 35,
+      "urea_domestic_production_mt": 26,
+      "urea_import_dependency_pct": 26,
+      "dap_consumption_mt": 10,
+      "dap_import_dependency_pct": 50,
+      "potash_import_dependency_pct": 100,
+      "fertilizer_subsidy_inr_cr": 188000,
+      "top_import_sources": ["China", "Oman", "Saudi Arabia", "Russia", "Qatar"]
+    },
+    "energy_inputs": {
+      "natural_gas_for_urea_bcm": 10,
+      "gas_import_dependency_pct": 50,
+      "lng_sourcing": "Qatar (40%), US, Oman, spot market",
+      "diesel_price_sensitivity": "Every INR 10/litre increase adds INR 15,000/hectare to farming cost"
+    },
+    "food_security": {
+      "buffer_stock_rice_mt": 32,
+      "buffer_stock_wheat_mt": 26,
+      "pds_beneficiaries_cr": 80,
+      "inflation_food_cpi_current_pct": 8.5
+    },
+    "key_risks": [
+      "Fertilizer shortage during sowing season — crop failure risk",
+      "Diesel and transport cost spiral — farm gate price collapse vs retail inflation",
+      "Natural gas supply disruption halting urea plants",
+      "Rupee depreciation inflating all import-dependent input costs",
+      "Rural demand contraction cascading to FMCG, auto, banking sectors"
+    ]
+  }
+}

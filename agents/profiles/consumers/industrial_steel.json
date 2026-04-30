@@ -1,0 +1,30 @@
+{
+  "agent_id": "industrial_steel_consumer",
+  "name": "Indian Industrial Steel Consumers (Aggregate)",
+  "agent_type": "consumer",
+  "description": "Aggregate representation of Indian auto, construction, and manufacturing sectors that consume steel as input. Highly price-sensitive with limited switching options.",
+  "country": "IN",
+  "information_completeness": 0.7,
+  "direct_partners": ["tata_steel", "jsw_steel"],
+  "objectives": [
+    "Secure stable steel supply at competitive prices to maintain production schedules",
+    "Minimize input cost volatility to preserve profit margins in competitive sectors",
+    "Diversify supplier base to reduce dependency on domestic oligopoly",
+    "Maintain quality standards while optimizing procurement costs"
+  ],
+  "constraints": [
+    "Long-term contracts with auto OEMs limit ability to pass through cost increases",
+    "Import tariffs and logistics costs make international sourcing uncompetitive",
+    "Quality certification requirements limit approved supplier pool",
+    "Working capital constraints prevent large-scale stockpiling strategies"
+  ],
+  "data": {
+    "annual_steel_consumption_mt": 45000000,
+    "import_dependency_pct": 30,
+    "price_sensitivity": 0.75,
+    "switching_lead_time_months": 3,
+    "max_stockpile_months": 2,
+    "financial_health": 0.68,
+    "fear_greed_index": 4.8
+  }
+}

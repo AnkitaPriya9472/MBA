@@ -1,0 +1,13 @@
+openai>=1.30
+pydantic>=2.7
+httpx
+tenacity
+rich
+jupyter
+ipywidgets
+matplotlib
+pandas
+pytest
+pytest-asyncio
+nest-asyncio
+streamlit

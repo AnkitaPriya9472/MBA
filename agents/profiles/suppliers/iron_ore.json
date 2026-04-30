@@ -1,0 +1,30 @@
+{
+  "agent_id": "iron_ore",
+  "name": "Iron Ore Suppliers (India Domestic + Imports)",
+  "agent_type": "supplier",
+  "description": "Aggregate representation of iron ore miners supplying Indian steel producers. Mix of domestic (NMDC, Tata Steel captive) and imported (Australia, Brazil) sources.",
+  "country": "IN",
+  "information_completeness": 0.8,
+  "direct_partners": ["tata_steel", "jsw_steel"],
+  "objectives": [
+    "Maximize margin per ton while maintaining long-term customer relationships",
+    "Secure long-term offtake agreements to justify capacity expansion investment",
+    "Maintain supply discipline to prevent price collapse from oversupply",
+    "Diversify customer base beyond Indian steel producers to global markets"
+  ],
+  "constraints": [
+    "60% of volume committed under long-term contracts with fixed pricing formulas",
+    "Export restrictions and duties limit ability to sell to higher-priced international markets",
+    "Environmental clearances constrain production capacity expansion",
+    "Transportation infrastructure bottlenecks limit delivery flexibility"
+  ],
+  "data": {
+    "annual_supply_capacity_mt": 300000000,
+    "price_per_ton_usd": 115,
+    "margin_pct": 22,
+    "contracted_volume_pct": 60,
+    "spot_market_volume_pct": 40,
+    "financial_health": 0.78,
+    "fear_greed_index": 5.5
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "agent_id": "ioc",
+  "name": "Indian Oil Corporation (IOC)",
+  "agent_type": "company",
+  "country": "IN",
+  "description": "India's largest commercial enterprise by revenue and the flagship national oil company. Operates the country's biggest refining network (80.7 MTPA), a vast fuel retail network (35,000+ outlets), and manages a significant share of India's strategic petroleum reserves. Central to India's energy security.",
+  "objectives": [
+    "Ensure uninterrupted fuel supply across India despite supply disruption",
+    "Manage crude procurement costs and protect refining margins",
+    "Maintain strategic petroleum reserve levels for national energy security",
+    "Protect financial stability and shareholder value under extreme cost pressure"
+  ],
+  "constraints": [
+    "Government-regulated retail fuel pricing — cannot fully pass through costs",
+    "88% import dependency on crude oil — limited domestic alternatives",
+    "Pipeline and logistics infrastructure designed around Gulf crude grades",
+    "Refinery configuration optimized for specific crude baskets — switching grades has yield penalties",
+    "Strategic petroleum reserves cover only ~9.5 days of consumption"
+  ],
+  "data": {
+    "financial_year": "FY2024-25",
+    "revenue_inr_cr": 875000,
+    "net_profit_inr_cr": 31000,
+    "refining_capacity_mtpa": 80.7,
+    "refineries": ["Panipat", "Mathura", "Gujarat", "Haldia", "Barauni", "Paradip", "Digboi", "Bongaigaon", "Guwahati"],
+    "market_share_pct": {
+      "refining": 31,
+      "fuel_retail": 42,
+      "lpg_distribution": 38
+    },
+    "crude_sourcing": {
+      "gulf_share_pct": 58,
+      "top_suppliers": ["Iraq", "Saudi Arabia", "UAE", "Kuwait"],
+      "russia_share_pct": 22,
+      "africa_share_pct": 12,
+      "spot_vs_term_ratio": "60:40"
+    },
+    "strategic_reserves": {
+      "capacity_million_tonnes": 5.33,
+      "current_fill_pct": 85,
+      "days_of_cover": 9.5
+    },
+    "pipeline_network_km": 18000,
+    "fuel_stations": 35700,
+    "key_risks": [
+      "Crude oil price volatility and supply disruption",
+      "Forex risk (INR/USD) on import bill",
+      "Government under-recovery on subsidised fuels",
+      "Refinery utilisation drop if crude supply constrained"
+    ]
+  }
+}

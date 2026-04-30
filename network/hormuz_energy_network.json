@@ -1,0 +1,97 @@
+{
+  "network_id": "india_energy_import_network_2025",
+  "description": "India's energy import network — crude oil, LNG, and fertilizer flows via Strait of Hormuz",
+  "base_year": 2025,
+  "routes": [
+    {
+      "from_country": "SA",
+      "to_country": "IN",
+      "commodity": "crude_oil",
+      "baseline_volume_mt": 40000000,
+      "baseline_tariff_pct": 0,
+      "friction": 0.08,
+      "transport_cost_usd_per_mt": 22,
+      "lead_time_days": 20
+    },
+    {
+      "from_country": "UAE",
+      "to_country": "IN",
+      "commodity": "crude_oil",
+      "baseline_volume_mt": 20000000,
+      "baseline_tariff_pct": 0,
+      "friction": 0.07,
+      "transport_cost_usd_per_mt": 18,
+      "lead_time_days": 16
+    },
+    {
+      "from_country": "IQ",
+      "to_country": "IN",
+      "commodity": "crude_oil",
+      "baseline_volume_mt": 25000000,
+      "baseline_tariff_pct": 0,
+      "friction": 0.1,
+      "transport_cost_usd_per_mt": 20,
+      "lead_time_days": 18
+    },
+    {
+      "from_country": "RU",
+      "to_country": "IN",
+      "commodity": "crude_oil",
+      "baseline_volume_mt": 35000000,
+      "baseline_tariff_pct": 0,
+      "friction": 0.15,
+      "transport_cost_usd_per_mt": 30,
+      "lead_time_days": 25
+    },
+    {
+      "from_country": "US",
+      "to_country": "IN",
+      "commodity": "crude_oil",
+      "baseline_volume_mt": 8000000,
+      "baseline_tariff_pct": 0,
+      "friction": 0.2,
+      "transport_cost_usd_per_mt": 55,
+      "lead_time_days": 40
+    },
+    {
+      "from_country": "QA",
+      "to_country": "IN",
+      "commodity": "lng",
+      "baseline_volume_mt": 6000000,
+      "baseline_tariff_pct": 0,
+      "friction": 0.09,
+      "transport_cost_usd_per_mt": 35,
+      "lead_time_days": 15
+    },
+    {
+      "from_country": "SA",
+      "to_country": "IN",
+      "commodity": "fertilizers",
+      "baseline_volume_mt": 3000000,
+      "baseline_tariff_pct": 0,
+      "friction": 0.1,
+      "transport_cost_usd_per_mt": 28,
+      "lead_time_days": 20
+    },
+    {
+      "from_country": "IN",
+      "to_country": "ASEAN",
+      "commodity": "petroleum_products",
+      "baseline_volume_mt": 20000000,
+      "baseline_tariff_pct": 2,
+      "friction": 0.1,
+      "transport_cost_usd_per_mt": 40,
+      "lead_time_days": 12
+    },
+    {
+      "from_country": "IN",
+      "to_country": "EU",
+      "commodity": "petroleum_products",
+      "baseline_volume_mt": 15000000,
+      "baseline_tariff_pct": 3,
+      "friction": 0.15,
+      "transport_cost_usd_per_mt": 80,
+      "lead_time_days": 28
+    }
+  ]
+}

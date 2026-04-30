@@ -1,0 +1,38 @@
+{
+  "agent_id": "gov_us",
+  "name": "United States Government (USTR)",
+  "agent_type": "government",
+  "description": "US trade policy authority with Section 232 national security tariff authority. Balances domestic steel lobby demands with strategic partnership considerations.",
+  "country": "US",
+  "information_completeness": 1.0,
+  "direct_partners": [],
+  "objectives": [
+    "Protect domestic steel production capacity from import surge",
+    "Maintain national security justification for Section 232 tariffs",
+    "Preserve strategic partnership with India while enforcing trade remedies",
+    "Achieve bilateral trade balance improvement through tariff leverage"
+  ],
+  "constraints": [
+    "Section 232 actions subject to judicial review and WTO dispute challenge",
+    "Congress oversight limits unilateral tariff escalation beyond current levels",
+    "Strategic priorities in Indo-Pacific require careful India relationship management",
+    "Domestic consumer industries oppose tariffs due to input cost increases"
+  ],
+  "data": {
+    "trade_deficit_with_india_usd_bn": 35,
+    "domestic_steel_lobby_influence": 0.8,
+    "section_232_authority": true,
+    "diplomatic_status": {
+      "IN": "strategic_partner",
+      "CN": "adversarial"
+    },
+    "policy_tools": [
+      "section_232_tariff",
+      "antidumping_duty",
+      "bilateral_negotiation",
+      "wto_dispute"
+    ],
+    "financial_health": 0.85,
+    "fear_greed_index": 6.0
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "agent_id": "indian_airlines",
+  "name": "Indian Aviation Sector (IndiGo & Air India)",
+  "agent_type": "company",
+  "country": "IN",
+  "description": "India's aviation sector represented by its two largest carriers — IndiGo (market leader, ~60% domestic share) and Air India (Tata-owned, full-service international). Aviation turbine fuel (ATF) constitutes 35-45% of airline operating costs, making the sector acutely vulnerable to oil price shocks.",
+  "objectives": [
+    "Maintain flight operations and route network despite ATF price surge",
+    "Protect operating margins and cash reserves under extreme fuel costs",
+    "Manage passenger demand impact from potential fare hikes",
+    "Honour fleet expansion commitments (IndiGo: 500+ aircraft order)"
+  ],
+  "constraints": [
+    "ATF is 35-45% of operating costs — $150 crude could mean 80%+ ATF price increase",
+    "Indian airlines cannot hedge fuel in domestic markets (regulatory restriction)",
+    "Fare increases face competitive pressure and demand elasticity",
+    "Fleet commitments — aircraft delivery payments in USD, exacerbated by rupee depreciation",
+    "Labour-intensive — cannot quickly cut capacity without workforce disruption",
+    "International routes require fuel stops that may be disrupted"
+  ],
+  "data": {
+    "financial_year": "FY2024-25",
+    "indigo": {
+      "revenue_inr_cr": 73000,
+      "net_profit_inr_cr": 6800,
+      "domestic_market_share_pct": 62,
+      "fleet_size": 380,
+      "fuel_cost_pct_of_revenue": 38,
+      "cash_reserves_inr_cr": 28000,
+      "order_book_aircraft": 500
+    },
+    "air_india": {
+      "revenue_inr_cr": 42000,
+      "domestic_market_share_pct": 14,
+      "international_share_pct": 22,
+      "fleet_size": 200,
+      "fuel_cost_pct_of_revenue": 42,
+      "transformation_capex_usd_bn": 70
+    },
+    "sector_metrics": {
+      "total_domestic_passengers_cr": 15.5,
+      "total_international_passengers_cr": 3.2,
+      "atf_price_current_inr_kl": 98000,
+      "atf_sensitivity": "Every $10/barrel increase adds ~INR 6,000/kl to ATF cost",
+      "break_even_load_factor_pct": 78
+    },
+    "key_risks": [
+      "ATF price surge eroding margins or pushing to operating losses",
+      "Rupee depreciation increasing USD-denominated lease and capex costs",
+      "Demand destruction from fare hikes reducing load factors",
+      "International route disruption through Gulf airspace",
+      "Working capital squeeze from higher fuel procurement costs"
+    ]
+  }
+}

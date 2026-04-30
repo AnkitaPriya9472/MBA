@@ -1,0 +1,28 @@
+{
+  "id": "hormuz_closure_iran_us_2025",
+  "name": "Iran-US Conflict: Strait of Hormuz Closure",
+  "description": "Escalating Iran-US military conflict leads to the closure of the Strait of Hormuz, choking ~20% of global oil supply and 40% of India's crude oil imports. India faces an acute energy crisis with cascading effects on inflation, forex reserves, manufacturing, and fiscal stability.",
+  "category": "supply_shock",
+  "severity": 0.95,
+  "affected_sectors": ["oil_and_gas", "refining", "petrochemicals", "shipping", "aviation", "manufacturing", "agriculture", "fertilizers", "power_generation", "forex_markets"],
+  "initiating_country": "US",
+  "context": "Following months of escalating tensions over Iran's nuclear programme, the United States launches targeted military strikes on Iranian nuclear and military installations. Iran retaliates by mining and blockading the Strait of Hormuz — the narrow chokepoint through which ~20 million barrels per day (roughly 20% of global oil supply) transit. Insurance companies suspend coverage for tankers transiting the Persian Gulf. Brent crude surges past $150/barrel within 72 hours. India, which imports ~88% of its crude oil (4.5+ million barrels/day), with ~40% sourced from Gulf nations via the Strait, faces an immediate supply disruption. The Indian rupee depreciates sharply, forex reserves come under pressure, and downstream industries from fertilisers to aviation face existential cost shocks. The crisis is expected to last 2-4 months before diplomatic resolution or alternative routing stabilises flows.",
+  "initial_market_impacts": {
+    "brent_crude": 2.10,
+    "indian_rupee_usd": 0.88,
+    "nifty_50": 0.82,
+    "natural_gas": 1.75,
+    "gold": 1.15,
+    "shipping_freight_rates": 3.50
+  },
+  "duration_rounds": null,
+  "initial_parameters": {
+    "strait_status": "blocked",
+    "crude_price_usd_barrel": 150,
+    "india_crude_import_dependency_pct": 88,
+    "gulf_share_of_india_imports_pct": 40,
+    "disrupted_supply_mbpd": 2.0,
+    "estimated_crisis_duration_months": "2-4",
+    "conflict_parties": ["US", "Iran"]
+  }
+}

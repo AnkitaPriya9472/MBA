@@ -1,0 +1,63 @@
+{
+  "country": "US",
+  "country_name": "United States",
+  "jurisdiction_type": "federal_presidential_republic",
+  "wto_obligations": {
+    "member_since": 1995,
+    "tariff_bindings": {
+      "steel_products": 0,
+      "iron_ore": 0
+    },
+    "notification_requirements": {
+      "tariff_changes": true,
+      "subsidy_programs": true,
+      "trade_remedy_actions": true
+    },
+    "dispute_settlement_subject": true,
+    "section_232_exemption_claimed": true
+  },
+  "trade_remedy_framework": {
+    "investigating_authorities": ["USITC", "DOC"],
+    "min_investigation_period_months": 8,
+    "max_investigation_period_months": 13,
+    "provisional_duty_authority": true,
+    "max_provisional_duty_pct": 100,
+    "sunset_review_required": true,
+    "sunset_period_years": 5,
+    "lesser_duty_rule": false,
+    "public_interest_test": false
+  },
+  "fiscal_rules": {
+    "deficit_ceiling_pct_gdp": null,
+    "debt_ceiling_nominal": true,
+    "subsidy_budget_constraint": false,
+    "congressional_approval_threshold_usd_bn": 10.0
+  },
+  "regulatory_independence": {
+    "central_bank_independent": true,
+    "competition_authority_independent": true,
+    "trade_remedy_authority_independent": true,
+    "capture_vulnerability_score": 0.3
+  },
+  "political_constraints": {
+    "divided_government_possible": true,
+    "election_cycle_years": 4,
+    "next_election_year": 2028,
+    "steel_industry_political_weight": 0.6,
+    "manufacturing_lobby_weight": 0.7,
+    "section_232_authority": true
+  },
+  "special_authorities": {
+    "section_232_national_security": {
+      "enabled": true,
+      "presidential_discretion": true,
+      "congressional_override_threshold": 0.67,
+      "wto_dispute_vulnerable": true
+    },
+    "section_301_unfair_trade": {
+      "enabled": true,
+      "ustr_authority": true,
+      "china_focus": true
+    }
+  }
+}

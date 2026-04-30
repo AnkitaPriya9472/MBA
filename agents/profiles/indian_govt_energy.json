@@ -1,0 +1,61 @@
+{
+  "agent_id": "indian_govt_energy",
+  "name": "Indian Government (Ministry of Petroleum & Finance)",
+  "agent_type": "government",
+  "country": "IN",
+  "description": "The Indian central government acting through the Ministry of Petroleum & Natural Gas and the Ministry of Finance. Responsible for energy security, fuel pricing policy, fiscal management, and macroeconomic stability during geopolitical crises.",
+  "objectives": [
+    "Ensure energy security and prevent fuel shortages across India",
+    "Contain inflation and protect consumers from runaway fuel prices",
+    "Manage fiscal deficit — India's oil import bill is ~$150B/year at $80 crude",
+    "Maintain forex reserve adequacy and rupee stability",
+    "Diversify energy sourcing away from geopolitical chokepoints"
+  ],
+  "constraints": [
+    "Fiscal deficit target of 4.5% of GDP — limited room for fuel subsidies",
+    "Political economy — fuel price hikes trigger public backlash and electoral risk",
+    "Strategic petroleum reserves last only ~9.5 days at current consumption",
+    "Diplomatic balancing — India has ties with both US and Iran",
+    "Limited short-term alternatives to Gulf crude pipeline infrastructure",
+    "Monetary policy coordination needed with RBI on inflation and forex"
+  ],
+  "data": {
+    "india_oil_sector": {
+      "crude_import_dependency_pct": 88,
+      "crude_import_bill_fy25_usd_bn": 155,
+      "daily_consumption_mbpd": 5.5,
+      "gulf_sourcing_share_pct": 40,
+      "russia_sourcing_share_pct": 22,
+      "domestic_production_mbpd": 0.6
+    },
+    "fiscal_position": {
+      "fiscal_deficit_target_pct_gdp": 4.5,
+      "forex_reserves_usd_bn": 620,
+      "import_cover_months": 10,
+      "oil_subsidy_budget_inr_cr": 11925,
+      "fuel_tax_revenue_inr_cr": 320000
+    },
+    "strategic_reserves": {
+      "total_capacity_million_tonnes": 5.33,
+      "locations": ["Visakhapatnam", "Mangalore", "Padur"],
+      "phase_2_planned_mt": 6.5,
+      "current_days_of_cover": 9.5
+    },
+    "policy_tools_available": [
+      "Release strategic petroleum reserves",
+      "Cut excise duty on fuel to cushion prices",
+      "Invoke IEA coordinated emergency response",
+      "Negotiate emergency crude supplies from Russia, US SPR, Africa",
+      "Impose fuel rationing or priority allocation",
+      "RBI forex intervention to stabilise rupee",
+      "Diplomatic engagement — ceasefire advocacy at UN/G20",
+      "Fast-track LNG import contracts and coal-to-power substitution"
+    ],
+    "diplomatic_context": {
+      "india_iran_relations": "Strategic — Chabahar port, historical trade ties",
+      "india_us_relations": "Strategic partner — defence, trade, Quad alliance",
+      "india_saudi_relations": "Top crude supplier, strategic investment partner",
+      "india_russia_relations": "Discounted crude supplier since 2022, strategic partner"
+    }
+  }
+}

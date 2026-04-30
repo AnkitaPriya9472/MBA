@@ -1,0 +1,21 @@
+{
+  "id": "antidumping_petition_china_2025",
+  "name": "Anti-Dumping Petition Against Chinese Steel",
+  "category": "regulatory",
+  "severity": 0.4,
+  "affected_sectors": ["steel", "construction"],
+  "initiating_country": "IN",
+  "context": "The Indian steel industry has filed an anti-dumping petition with the Directorate General of Trade Remedies (DGTR) alleging that Chinese steel producers are selling hot-rolled coil at prices below fair market value in India. The petition claims material injury from import volumes that have increased 35% year-over-year, depressing domestic prices by 12%. DGTR has initiated a preliminary investigation with a statutory timeline of 6-12 months before a provisional duty determination.",
+  "initial_market_impacts": {
+    "steel_hrc": 1.02,
+    "iron_ore": 1.0
+  },
+  "duration_rounds": null,
+  "initial_parameters": {
+    "petitioner_country": "IN",
+    "target_country": "CN",
+    "commodity": "steel_hrc",
+    "alleged_dumping_margin_pct": 18,
+    "import_volume_increase_pct": 35
+  }
+}

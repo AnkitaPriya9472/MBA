@@ -1,0 +1,59 @@
+{
+  "agent_id": "rbi",
+  "name": "Reserve Bank of India (RBI)",
+  "agent_type": "regulator",
+  "country": "IN",
+  "description": "India's central bank responsible for monetary policy, inflation targeting (4% CPI ± 2%), financial stability, and forex reserve management. In an oil shock scenario, the RBI faces the classic impossible trinity — managing inflation, supporting growth, and defending the currency simultaneously.",
+  "objectives": [
+    "Contain inflation within the 2-6% target band despite supply-side oil shock",
+    "Maintain orderly forex markets and prevent disruptive rupee depreciation",
+    "Preserve financial system stability — banks, NBFCs, and capital markets",
+    "Support economic growth without fuelling inflationary expectations"
+  ],
+  "constraints": [
+    "Inflation targeting mandate — CPI already at 5.5%, oil shock could push to 8-10%",
+    "Rate hikes to fight inflation would slow GDP growth (currently ~6.5%)",
+    "Forex reserves ($620B) are large but defending rupee burns reserves quickly",
+    "Capital outflows from FPIs during geopolitical risk reduce market liquidity",
+    "Transmission lag — rate changes take 6-9 months to affect real economy",
+    "Cannot control supply-side inflation with demand-side monetary tools"
+  ],
+  "data": {
+    "monetary_policy": {
+      "repo_rate_pct": 6.0,
+      "inflation_cpi_current_pct": 5.5,
+      "inflation_target_pct": 4.0,
+      "tolerance_band_pct": "2-6",
+      "gdp_growth_current_pct": 6.5,
+      "gdp_growth_forecast_pct": 6.3
+    },
+    "forex_position": {
+      "forex_reserves_usd_bn": 620,
+      "import_cover_months": 10,
+      "inr_usd_rate": 86.5,
+      "fpi_net_flows_fy25_usd_bn": -12,
+      "daily_forex_market_turnover_usd_bn": 80
+    },
+    "financial_stability": {
+      "bank_credit_growth_pct": 14,
+      "gnpa_ratio_pct": 2.8,
+      "capital_adequacy_ratio_pct": 16.5,
+      "mutual_fund_aum_inr_lakh_cr": 68,
+      "oil_company_borrowings_risk": "Higher working capital needs from OMCs could stress banking system"
+    },
+    "policy_tools_available": [
+      "Adjust repo rate (hike to fight inflation, cut to support growth)",
+      "Open market operations (OMO) — buy/sell government securities",
+      "Forex market intervention — sell USD from reserves to defend rupee",
+      "Special dollar swap windows for oil marketing companies",
+      "CRR/SLR adjustments to manage liquidity",
+      "Forward guidance and communication to anchor expectations",
+      "Regulatory forbearance for stressed sectors (aviation, transport)"
+    ],
+    "historical_precedent": {
+      "2022_ukraine_shock": "RBI hiked repo 250bps, spent $70B defending rupee, inflation peaked at 7.8%",
+      "2008_oil_shock": "Crude at $147 — RBI raised rates, rupee fell 25%, inflation hit 12%",
+      "2014_oil_crash": "Crude fell to $45 — RBI cut rates 150bps, rupee stabilised, growth recovered"
+    }
+  }
+}

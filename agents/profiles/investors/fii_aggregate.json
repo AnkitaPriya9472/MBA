@@ -1,0 +1,30 @@
+{
+  "agent_id": "fii_aggregate",
+  "name": "Foreign Institutional Investors (India Steel Sector)",
+  "agent_type": "investor",
+  "description": "Aggregate representation of foreign institutional investors with positions in Indian steel equities. Sophisticated analysis with high information access but subject to sentiment contagion.",
+  "country": "GLOBAL",
+  "information_completeness": 0.8,
+  "direct_partners": [],
+  "objectives": [
+    "Generate alpha through sector rotation based on trade policy and commodity cycle analysis",
+    "Minimize drawdown risk during geopolitical and trade shock events",
+    "Maintain liquidity to meet redemption requests without fire-sale losses",
+    "Outperform MSCI India Materials index benchmark by 200+ basis points annually"
+  ],
+  "constraints": [
+    "SEBI regulations limit single-stock concentration above 10% of AUM",
+    "Redemption pressure during market stress forces liquidation at disadvantageous prices",
+    "Currency hedging costs reduce net returns on INR-denominated holdings",
+    "Quarterly reporting requirements create short-term performance pressure"
+  ],
+  "data": {
+    "aum_india_usd_bn": 180,
+    "steel_sector_allocation_pct": 4.2,
+    "sentiment_sensitivity": 0.85,
+    "average_holding_period_months": 18,
+    "leverage_ratio": 1.0,
+    "financial_health": 0.88,
+    "fear_greed_index": 6.2
+  }
+}

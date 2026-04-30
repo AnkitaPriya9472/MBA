@@ -1,0 +1,51 @@
+{
+  "name": "Indian Steel Consumers (Auto & Construction Sector)",
+  "role": "consumer",
+  "description": "Represents the aggregate demand side — major steel-consuming industries in India including automotive manufacturers, construction companies, and infrastructure developers. These sectors account for ~75% of domestic steel consumption.",
+  "objectives": [
+    "Secure stable and affordable steel supply for operations",
+    "Minimise raw material cost impact on product pricing",
+    "Maintain production schedules without supply disruptions",
+    "Pass through cost increases to end consumers only as a last resort"
+  ],
+  "constraints": [
+    "Price-sensitive end markets — cannot absorb unlimited cost increases",
+    "Long-term supply contracts limit short-term flexibility",
+    "Quality specifications — cannot easily switch to inferior alternatives",
+    "Inventory carrying costs — stockpiling is expensive",
+    "Dependent on domestic steel availability — import alternatives are costlier"
+  ],
+  "data": {
+    "steel_consumption_profile": {
+      "india_total_steel_consumption_mtpa": 136,
+      "automotive_sector_share_pct": 10,
+      "construction_infrastructure_share_pct": 62,
+      "capital_goods_share_pct": 8,
+      "consumer_durables_share_pct": 5
+    },
+    "price_sensitivity": {
+      "avg_steel_price_inr_per_tonne": 55000,
+      "price_increase_tolerance_pct": 8,
+      "price_above_which_demand_drops_sharply": "above 65000 INR/tonne",
+      "import_parity_price_inr_per_tonne": 58000
+    },
+    "automotive_context": {
+      "steel_as_pct_of_vehicle_cost": 12,
+      "annual_vehicle_production_mn": 5.8,
+      "key_players": ["Maruti Suzuki", "Tata Motors", "Hyundai", "Mahindra"],
+      "ev_transition_impact": "EV requires ~30% less steel per vehicle but more aluminium"
+    },
+    "construction_context": {
+      "infra_spending_inr_lakh_cr": 11.1,
+      "housing_demand_units_mn": 2.5,
+      "smart_cities_projects": 100,
+      "steel_intensity_kg_per_sqm": 40
+    },
+    "switching_behaviour": {
+      "can_switch_to_imports": "Partially — quality certification and lead times are barriers",
+      "can_substitute_materials": "Limited — aluminium/composites for some auto applications",
+      "can_defer_purchases": "Up to 1-2 quarters before production impact",
+      "typical_inventory_days": 30
+    }
+  }
+}

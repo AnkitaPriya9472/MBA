@@ -1,0 +1,21 @@
+{
+  "id": "tariff_shock_us_india_2025",
+  "name": "US 50% Tariff on Indian Steel",
+  "description": "US imposes a 50% ad valorem tariff on all Indian steel imports under Section 232, disrupting $1.8B in annual trade flows and forcing Indian producers to seek alternative markets.",
+  "category": "tariff",
+  "severity": 0.85,
+  "affected_sectors": ["steel", "manufacturing", "auto"],
+  "initiating_country": "US",
+  "context": "The United States has imposed a 50% ad valorem tariff on all steel imports from India effective immediately under Section 232 authority, citing national security concerns. Indian steel exports to the US, valued at approximately $1.8 billion annually, now face duties that effectively price them out of the US market. The move is expected to force Indian producers to divert 2+ million tons of steel to already-competitive Asian and European markets, compressing margins industry-wide.",
+  "initial_market_impacts": {
+    "steel_hrc": 0.72,
+    "iron_ore": 0.95
+  },
+  "duration_rounds": null,
+  "initial_parameters": {
+    "tariff_rate_pct": 50,
+    "target_country": "IN",
+    "imposing_country": "US",
+    "affected_trade_value_usd_bn": 1.8
+  }
+}

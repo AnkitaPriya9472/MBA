@@ -1,0 +1,39 @@
+{
+  "agent_id": "gov_india",
+  "name": "Government of India (Ministry of Commerce)",
+  "agent_type": "government",
+  "description": "Indian government trade policy authority responsible for protecting domestic steel industry while maintaining WTO compliance and strategic partnerships.",
+  "country": "IN",
+  "information_completeness": 0.95,
+  "direct_partners": ["dgtr", "tata_steel", "jsw_steel"],
+  "objectives": [
+    "Protect domestic steel industry employment (500,000+ direct and indirect jobs)",
+    "Maintain WTO compliance while pursuing retaliation options against unfair trade practices",
+    "Stabilize steel prices to prevent industrial cost inflation in downstream sectors",
+    "Diversify export markets to reduce dependency on any single trade partner"
+  ],
+  "constraints": [
+    "WTO commitments limit retaliatory tariff rates and require notification procedures",
+    "Fiscal deficit ceiling at 6% of GDP constrains subsidy scale and scope",
+    "DGTR investigation process has minimum 6-month duration by statute",
+    "Strategic partnership with US limits aggressive retaliation options"
+  ],
+  "data": {
+    "fiscal_deficit_pct_gdp": 5.1,
+    "wto_member": true,
+    "free_trade_agreements": ["ASEAN", "UAE-CEPA", "Mauritius"],
+    "diplomatic_status": {
+      "US": "strategic_partner",
+      "CN": "competitive_neutral"
+    },
+    "policy_tools": [
+      "tariff",
+      "subsidy",
+      "export_incentive",
+      "exchange_rate_intervention"
+    ],
+    "steel_sector_gdp_contribution_pct": 2.0,
+    "financial_health": 0.75,
+    "fear_greed_index": 4.0
+  }
+}

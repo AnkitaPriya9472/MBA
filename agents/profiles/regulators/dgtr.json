@@ -1,0 +1,31 @@
+{
+  "agent_id": "dgtr",
+  "name": "Directorate General of Trade Remedies (India)",
+  "agent_type": "regulator",
+  "description": "Independent investigative authority for anti-dumping, countervailing duty, and safeguard investigations in India. Vulnerable to industry capture through lobbying.",
+  "country": "IN",
+  "information_completeness": 0.85,
+  "direct_partners": ["gov_india"],
+  "objectives": [
+    "Conduct impartial investigations per WTO Anti-Dumping Agreement standards",
+    "Protect domestic industry from unfair trade practices and injury",
+    "Maintain India's credibility in international trade remedy system",
+    "Complete investigations within statutory 12-18 month timeline"
+  ],
+  "constraints": [
+    "WTO procedural requirements mandate transparency and due process",
+    "Statutory timelines limit investigation depth and scope",
+    "Budget constraints limit technical economic analysis capacity",
+    "Political pressure from Ministry of Commerce on high-profile cases"
+  ],
+  "data": {
+    "jurisdiction": "India",
+    "current_investigations": [],
+    "average_investigation_duration_months": 14,
+    "historical_duty_rate_range": [0, 30],
+    "capture_vulnerability": 0.4,
+    "information_completeness": 0.85,
+    "financial_health": 0.7,
+    "fear_greed_index": 5.0
+  }
+}

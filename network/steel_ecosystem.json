@@ -1,0 +1,82 @@
+{
+  "network_id": "global_steel_ecosystem_2025",
+  "description": "Global steel trade network with bilateral routes, tariff rates, and friction factors",
+  "base_year": 2025,
+  "routes": [
+    {
+      "from_country": "IN",
+      "to_country": "US",
+      "commodity": "steel_hrc",
+      "baseline_volume_mt": 2100000,
+      "baseline_tariff_pct": 25,
+      "friction": 0.15,
+      "transport_cost_usd_per_mt": 85,
+      "lead_time_days": 35
+    },
+    {
+      "from_country": "IN",
+      "to_country": "EU",
+      "commodity": "steel_hrc",
+      "baseline_volume_mt": 800000,
+      "baseline_tariff_pct": 5,
+      "friction": 0.2,
+      "transport_cost_usd_per_mt": 95,
+      "lead_time_days": 28
+    },
+    {
+      "from_country": "IN",
+      "to_country": "ASEAN",
+      "commodity": "steel_hrc",
+      "baseline_volume_mt": 600000,
+      "baseline_tariff_pct": 3,
+      "friction": 0.1,
+      "transport_cost_usd_per_mt": 45,
+      "lead_time_days": 18
+    },
+    {
+      "from_country": "AU",
+      "to_country": "IN",
+      "commodity": "iron_ore",
+      "baseline_volume_mt": 50000000,
+      "baseline_tariff_pct": 2,
+      "friction": 0.05,
+      "transport_cost_usd_per_mt": 28,
+      "lead_time_days": 21
+    },
+    {
+      "from_country": "CN",
+      "to_country": "IN",
+      "commodity": "steel_hrc",
+      "baseline_volume_mt": 1500000,
+      "baseline_tariff_pct": 12,
+      "friction": 0.12,
+      "transport_cost_usd_per_mt": 55,
+      "lead_time_days": 22
+    },
+    {
+      "from_country": "IN",
+      "to_country": "ME",
+      "commodity": "steel_hrc",
+      "baseline_volume_mt": 450000,
+      "baseline_tariff_pct": 8,
+      "friction": 0.18,
+      "transport_cost_usd_per_mt": 72,
+      "lead_time_days": 15
+    },
+    {
+      "from_country": "BR",
+      "to_country": "IN",
+      "commodity": "iron_ore",
+      "baseline_volume_mt": 15000000,
+      "baseline_tariff_pct": 2,
+      "friction": 0.08,
+      "transport_cost_usd_per_mt": 42,
+      "lead_time_days": 40
+    }
+  ],
+  "commodity_reference_prices": {
+    "steel_hrc": 650,
+    "iron_ore": 115,
+    "coking_coal": 185
+  }
+}
